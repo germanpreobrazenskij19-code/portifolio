@@ -2,6 +2,7 @@ const dialog = document.querySelector('#site-dialog');
 const content = document.querySelector('#dialog-content');
 const cards = [...document.querySelectorAll('.work-card')];
 const form = document.querySelector('#booking-form');
+form.querySelector('[type=submit]').disabled = false;
 let opener;
 let galleryIndex = 0;
 function showDialog(trigger, lightbox = false) {
@@ -62,19 +63,33 @@ dialog.addEventListener('keydown', event => {
     stepWork(event.key === 'ArrowRight' ? 1 : -1);
   }
 });
-document.querySelectorAll('[data-filter]').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('[data-filter]').forEach(filter => {
-      const selected = filter === button;
-      filter.classList.toggle('active', selected);
-      filter.setAttribute('aria-pressed', String(selected));
-    });
-    cards.forEach(card => { card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter; });
-    document.querySelector('.portfolio-grid').classList.toggle('is-filtered', button.dataset.filter !== 'all');
-    const count = visibleWorks().length;
-    document.querySelector('#portfolio-status').textContent = `${count} ${count === 1 ? 'работа' : count < 5 ? 'работы' : 'работ'}`;
+let currentFilter = 'all';
+let expandedWorks = false;
+const moreWorks = document.querySelector('#more-works');
+function updatePortfolio() {
+  const matches = cards.filter(card => currentFilter === 'all' || card.dataset.category === currentFilter);
+  cards.forEach(card => { card.hidden = !matches.includes(card) || (currentFilter === 'all' && !expandedWorks && matches.indexOf(card) >= 3); });
+  document.querySelector('.portfolio-grid').classList.toggle('is-filtered', currentFilter !== 'all');
+  document.querySelectorAll('[data-filter]').forEach(button => {
+    const selected = button.dataset.filter === currentFilter;
+    button.classList.toggle('active', selected);
+    button.setAttribute('aria-pressed', String(selected));
   });
+  const count = visibleWorks().length;
+  document.querySelector('#portfolio-status').textContent = currentFilter === 'all' ? `${count} из ${cards.length} работ` : `${count} ${count === 1 ? 'работа' : count < 5 ? 'работы' : 'работ'}`;
+  moreWorks.hidden = currentFilter !== 'all';
+  moreWorks.setAttribute('aria-expanded', String(expandedWorks));
+  moreWorks.querySelector('.more-label').textContent = expandedWorks ? 'Свернуть галерею' : 'Ещё 3 работы';
+}
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+  currentFilter = button.dataset.filter;
+  updatePortfolio();
+}));
+moreWorks.addEventListener('click', () => {
+  expandedWorks = !expandedWorks;
+  updatePortfolio();
 });
+updatePortfolio();
 const idea = form.elements.idea;
 idea.addEventListener('input', () => {
   idea.setCustomValidity('');
