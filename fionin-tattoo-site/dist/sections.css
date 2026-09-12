@@ -46,15 +46,27 @@ footer.full-footer{display:block;background:var(--paper);border-top:1px solid va
 @media(max-width:380px){.filters{gap:17px}.filters button{font-size:11px}.work-toolbar{gap:8px}#portfolio-status{font-size:8px}.service-choice label{flex-basis:calc(50% - 7px)}.service-choice label span{font-size:11px}.footer-links>a{margin-left:0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
 
-@keyframes first-screen-appear{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
-@keyframes first-screen-photo{from{opacity:.55;scale:1.035}to{opacity:1;scale:1}}
+@keyframes first-screen-appear{from{opacity:0;translate:0 38px}to{opacity:1;translate:0 0}}
+@keyframes first-screen-photo{from{opacity:.3;scale:1.13}to{opacity:1;scale:1}}
 @media(prefers-reduced-motion:no-preference){
-  .wordmark{animation:first-screen-appear .85s cubic-bezier(.22,1,.36,1) both}
-  .hero-shot img{animation:first-screen-photo 1.25s cubic-bezier(.22,1,.36,1) both}
-  .hero-copy{animation:first-screen-appear .85s .12s cubic-bezier(.22,1,.36,1) both}
+  .wordmark{animation:wordmark-unveil 1.15s cubic-bezier(.22,1,.36,1) both}
+  .hero-shot img{translate:0 var(--hero-drift,0px);animation:first-screen-photo 1.8s cubic-bezier(.22,1,.36,1) both}
+  .hero-copy{animation:first-screen-appear 1.1s .2s cubic-bezier(.22,1,.36,1) both}
   .hero-actions .button{animation:first-screen-appear .75s .22s cubic-bezier(.22,1,.36,1) backwards}
   .hero-actions .button:nth-child(2){animation-delay:.3s}
   .hero-note{animation:first-screen-appear .85s .32s cubic-bezier(.22,1,.36,1) both}
   .hero :focus-visible,.wordmark:focus-visible{animation:none}
   dialog[open]{animation:first-screen-appear .25s cubic-bezier(.22,1,.36,1)}
+}
+
+@keyframes wordmark-unveil{from{opacity:0;clip-path:inset(0 0 100% 0);translate:0 22px}to{opacity:1;clip-path:inset(0);translate:0 0}}
+@media(prefers-reduced-motion:no-preference) and (hover:hover) and (pointer:fine){
+  .work-image img{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+  .work-image:hover img{transform:scale(1.055)}
+  .image-open{transition:rotate .5s,background .3s,color .3s}
+  .work-image:hover .image-open{rotate:45deg;background:var(--wine);color:var(--pink)}
+  .service-row>div{transition:translate .5s cubic-bezier(.16,1,.3,1)}
+  .service-row:hover>div{translate:10px 0}
+  .button:hover,.outline-action:hover{translate:0 -3px}
+  .button,.outline-action{transition:background .3s,color .3s,translate .4s cubic-bezier(.16,1,.3,1)}
 }

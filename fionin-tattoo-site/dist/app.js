@@ -136,6 +136,16 @@ if ('IntersectionObserver' in window) {
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 if (!motionPreference.matches && 'IntersectionObserver' in window && Element.prototype.animate) {
   const activeReveals = new Map();
+  const compactMotion = window.matchMedia('(max-width: 760px)');
+  function trackReveal(element, animation) {
+    if (!activeReveals.has(element)) activeReveals.set(element, new Set());
+    activeReveals.get(element).add(animation);
+    animation.onfinish = animation.oncancel = () => {
+      const animations = activeReveals.get(element);
+      animations?.delete(animation);
+      if (!animations?.size) activeReveals.delete(element);
+    };
+  }
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -143,13 +153,28 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
       revealObserver.unobserve(element);
       if (element.contains(document.activeElement)) return;
       const siblings = [...element.parentElement.children].filter(child => child.classList.contains('motion-target') && !child.hidden);
-      const delay = Math.min(Math.max(siblings.indexOf(element), 0), 3) * 70;
+      const delay = Math.min(Math.max(siblings.indexOf(element), 0), 3) * 110;
+      const distance = compactMotion.matches ? 32 : 64;
       const animation = element.animate([
-        { opacity: 0, transform: 'translateY(24px)' },
+        { opacity: 0, transform: `translateY(${distance}px)` },
         { opacity: 1, transform: 'translateY(0)' }
-      ], { duration: 700, delay, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'backwards' });
-      activeReveals.set(element, animation);
-      animation.onfinish = animation.oncancel = () => activeReveals.delete(element);
+      ], { duration: 1000, delay, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' });
+      trackReveal(element, animation);
+      const photo = element.querySelector('.work-image');
+      if (photo) {
+        trackReveal(element, photo.animate([
+          { clipPath: 'inset(0 0 100% 0)' },
+          { clipPath: 'inset(0 0 0% 0)' }
+        ], { duration: 1150, delay, easing: 'cubic-bezier(.76, 0, .24, 1)', fill: 'backwards' }));
+        trackReveal(element, photo.querySelector('img').animate([
+          { scale: '1.18' }, { scale: '1' }
+        ], { duration: 1450, delay, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' }));
+      }
+      const heading = element.querySelector('h2');
+      if (heading) trackReveal(element, heading.animate([
+        { clipPath: 'inset(0 0 100% 0)', translate: '0 25px' },
+        { clipPath: 'inset(0 0 0% 0)', translate: '0 0' }
+      ], { duration: 1000, delay: delay + 80, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' }));
     });
   }, { threshold: 0.06 });
 
@@ -161,12 +186,27 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
     const element = event.target.closest('.motion-target');
     if (!element) return;
     revealObserver.unobserve(element);
-    activeReveals.get(element)?.cancel();
+    activeReveals.get(element)?.forEach(animation => animation.cancel());
   });
+  const heroPhoto = document.querySelector('.hero-shot img');
+  let scrollFrame = 0;
+  function updateHeroPosition() {
+    scrollFrame = 0;
+    const distance = Math.min(window.scrollY * (compactMotion.matches ? 0.045 : 0.09), 60);
+    heroPhoto.style.setProperty('--hero-drift', `${distance}px`);
+  }
+  function requestHeroPosition() {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateHeroPosition);
+  }
+  window.addEventListener('scroll', requestHeroPosition, { passive: true });
+  updateHeroPosition();
   motionPreference.addEventListener('change', event => {
     if (!event.matches) return;
     revealObserver.disconnect();
-    activeReveals.forEach(animation => animation.cancel());
+    activeReveals.forEach(animations => animations.forEach(animation => animation.cancel()));
     activeReveals.clear();
+    window.removeEventListener('scroll', requestHeroPosition);
+    cancelAnimationFrame(scrollFrame);
+    heroPhoto.style.removeProperty('--hero-drift');
   });
 }
