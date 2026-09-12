@@ -1,20 +1,20 @@
-# Fionin Tattoo
+# Portfolio
 
-Responsive, framework-free HTML/CSS implementation of selected reference 05, with native accessible dialogs and studio contact links.
+Полное содержимое рабочей папки `auto`: сайты, дизайн-референсы, промпты и архивы.
 
-Serve the `dist` folder with any static web server. All fonts and imagery are local; there are no runtime package dependencies.
+## Сайты
 
-## Assets
+- `fionin-tattoo-site/` — Fionin Tattoo, адаптивная верстка по выбранному бордово-пудровому референсу. Готовые файлы — в `dist/`.
+- `sound-clab-site/` — Sound Clab, текущая версия сайта со всеми локальными доработками. Готовые файлы — в `dist/`, исходные референсы — в `references/`.
 
-`dist/assets/reference.png` is the user-selected AI-generated design reference. CSS clips only its photographic regions into the layout. The wordmark, navigation, main headlines, copy, buttons and panels are real HTML/CSS. Image crops are illustrative and are not the studio's actual portfolio. The gallery dialog links to the real studio's VK community.
+## Дизайн и материалы
 
-Fonts: Bodoni Moda, Prata and Manrope, downloaded from Google Fonts. They are used locally without third-party font requests.
+- `output/fionin-tattoo/` — 10 вариантов дизайна, анализ и промпты.
+- `output/sound-clab-concepts/` — референсы Sound Clab, варианты с логотипом, анализ и промпты.
+- `output/sound-clab-concept-02/` — дополнительная серия референсов Sound Clab.
 
-## Verification
+Архивы `fionin-tattoo-site.tar.gz` и `sound-clab-site.tar.gz` сохранены как существующие снимки сайтов. Текущие файлы находятся в соответствующих папках; архивы могут отражать более раннюю версию.
 
-- Compared visually against the 1536 × 1024 reference.
-- Checked mobile layout at 390 × 844: no horizontal overflow, all images load.
-- Verified consultation dialog, mobile navigation, services and close behavior.
-- No browser console errors; JavaScript syntax check passed.
+Для локального просмотра можно запустить статический сервер из нужной папки сайта, например `python3 -m http.server 4174 --directory dist`.
 
-Studio phone, address and VK link come from the business listing used in the design analysis. No appointment submission backend is simulated; contact actions open VK or the phone dialer.
+Корневой репозиторий синхронизирует всю папку `auto`. Локальные служебные каталоги `.git` вложенных проектов не входят в загружаемые материалы.
