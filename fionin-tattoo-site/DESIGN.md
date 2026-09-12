@@ -9,3 +9,5 @@ The chosen hero photograph is the visual reference for the entire site: warm pla
 - Motion: one-time photo reveals and heading entrances, no animation on form or gallery control containers, reduced-motion support. Images are clipped during reveal, not their interactive buttons.
 - Responsive: 72px header and single-column content on phones; 88px header on desktop. Hero keeps the full image at every width. Sticky header and mobile booking control have scroll offsets.
 - Authenticity: gallery photos are from the existing studio source list; hero is AI-generated from the supplied reference. Do not present the hero model as a member of staff or a real client.
+
+Services and booking use full-section decorative photographs with dark burgundy scrims. Booking text is light and its form stays opaque cream; FAQ retains an inline photograph. Background images are aria-hidden and lazy-loaded.

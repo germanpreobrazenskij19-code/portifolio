@@ -37,4 +37,4 @@ python3 -m http.server 4174 --bind 127.0.0.1 --directory dist
 
 ## Дополнительные изображения
 
-В услугах, FAQ и записи используются три декоративные иллюстрации, созданные через image_gen: services-sketch.jpg, piercing-details.jpg и drawing-process.jpg. Они сохранены в dist/assets/editorial, сжаты в JPEG и загружаются лениво. Промпты — references/section-images-prompts.md. Они не изображают реальную студию, сотрудников или ассортимент.
+В услугах, FAQ и записи используются три декоративные иллюстрации, созданные через image_gen: services-sketch.jpg, piercing-details.jpg и drawing-process.jpg. Они сохранены в dist/assets/editorial, сжаты в JPEG и загружаются лениво. В услугах и записи изображения занимают фон секции с бордовым затемнением; в FAQ изображение остаётся отдельным. Промпты — references/section-images-prompts.md. Они не изображают реальную студию, сотрудников или ассортимент.

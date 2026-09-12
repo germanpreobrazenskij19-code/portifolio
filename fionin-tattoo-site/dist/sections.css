@@ -75,3 +75,18 @@
 .faq-visual{max-width:440px}.faq-list{align-self:center}
 .booking-visual{max-width:460px;margin-top:30px}.booking-visual img{aspect-ratio:1.7}
 @media(max-width:760px){.section-visual{margin-top:26px;max-width:none}.service-visual img{aspect-ratio:1.5}.faq-layout .inline-link{margin-bottom:0}.faq-visual{margin-bottom:30px}.booking-visual{margin-top:28px}.booking-visual img{aspect-ratio:1.5}}
+
+/* Full-section photographs stay decorative; content sits above the scrim. */
+.services-section,.booking-section{position:relative;isolation:isolate;background:var(--wine)}
+.services-section:before{display:none}
+.section-backdrop{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.section-backdrop img{width:100%;height:100%;object-fit:cover;object-position:center}
+.section-backdrop:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(49,17,30,.91),rgba(57,22,33,.79))}
+.services-section>.content-wrap,.booking-section>.content-wrap{position:relative;z-index:1}
+.services-section .price-note{margin-top:48px}
+.booking-section .section-backdrop:after{background:linear-gradient(90deg,rgba(38,15,25,.92),rgba(49,19,28,.72))}
+.booking-section .booking-intro,.booking-section .booking-intro h2,.booking-section .booking-phone{color:var(--pink)}
+.booking-section .booking-intro .section-label,.booking-section .booking-intro>p:not(.section-label),.booking-section .contact-hint,.booking-section .booking-steps,.booking-section .booking-steps b{color:#e3cbbb}
+.booking-section .booking-steps{border-color:#b18b82}
+.booking-section form{box-shadow:0 20px 70px #19091230}
+@media(max-width:760px){.services-section .price-note{margin-top:30px}.section-backdrop:after{background:rgba(49,17,30,.86)}.booking-section .section-backdrop:after{background:rgba(38,15,25,.84)}.booking-section .section-backdrop img{object-position:60% center}}
