@@ -77,7 +77,7 @@ function updatePortfolio() {
   document.querySelector('#portfolio-status').textContent = currentFilter === 'all' ? `${count} из ${cards.length} работ` : `${count} ${count === 1 ? 'работа' : count < 5 ? 'работы' : 'работ'}`;
   moreWorks.hidden = currentFilter !== 'all';
   moreWorks.setAttribute('aria-expanded', String(expandedWorks));
-  moreWorks.querySelector('.more-label').textContent = expandedWorks ? 'Свернуть галерею' : 'Ещё 3 работы';
+  moreWorks.querySelector('.more-label').textContent = expandedWorks ? 'Свернуть галерею' : 'Ещё 5 работ';
 }
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
   currentFilter = button.dataset.filter;

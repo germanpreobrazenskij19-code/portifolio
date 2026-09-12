@@ -58,5 +58,27 @@
     "caption": "Цветок · лёгкая графика",
     "sourcePage": "https://yandex.ru/maps/org/133656900972/",
     "file": "assets/portfolio/flower.jpg"
+  },
+  {
+    "file": "assets/portfolio/fox.jpg",
+    "sourceUrl": "https://avatars.mds.yandex.net/get-altay/13265642/2a000001940e50c5d5b9f2fc54b7ee196fe9/XXXL",
+    "category": "tattoo",
+    "alt": "Цветная татуировка лисы под контуром волка",
+    "caption": "Лиса · цветной реализм",
+    "width": 720,
+    "height": 1280,
+    "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/",
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "file": "assets/portfolio/surreal.jpg",
+    "sourceUrl": "https://avatars.mds.yandex.net/get-altay/10632051/2a00000190944f265e4336f2d4b4b559d8fb/XXXL",
+    "category": "tattoo",
+    "alt": "Сюрреалистичная татуировка с портретами и глазом на руке",
+    "caption": "Портреты · сюрреализм",
+    "width": 1108,
+    "height": 1280,
+    "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/",
+    "checkedOn": "2026-09-12"
   }
 ]
