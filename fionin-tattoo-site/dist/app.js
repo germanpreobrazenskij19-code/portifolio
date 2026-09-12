@@ -162,7 +162,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
       trackReveal(element, animation);
       const photo = element.querySelector('.work-image');
       if (photo) {
-        trackReveal(element, photo.animate([
+        trackReveal(element, photo.querySelector("img").animate([
           { clipPath: 'inset(0 0 100% 0)' },
           { clipPath: 'inset(0 0 0% 0)' }
         ], { duration: 1150, delay, easing: 'cubic-bezier(.76, 0, .24, 1)', fill: 'backwards' }));
@@ -178,7 +178,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
     });
   }, { threshold: 0.06 });
 
-  document.querySelectorAll('.section-header, .work-toolbar, .work-card, .work-bottom, .service-intro, .service-row, .faq-layout > div:first-child, .faq-list details, .booking-intro, #booking-form, .contacts-section .section-label, .contacts-heading, .contact-grid > div, .footer-inner').forEach(element => {
+  document.querySelectorAll('.section-header, .work-card, .service-intro, .service-row, .faq-layout > div:first-child, .faq-list details, .booking-intro, .contacts-section .section-label, .contacts-heading, .contact-grid > div').forEach(element => {
     element.classList.add('motion-target');
     revealObserver.observe(element);
   });
@@ -188,25 +188,10 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
     revealObserver.unobserve(element);
     activeReveals.get(element)?.forEach(animation => animation.cancel());
   });
-  const heroPhoto = document.querySelector('.hero-shot img');
-  let scrollFrame = 0;
-  function updateHeroPosition() {
-    scrollFrame = 0;
-    const distance = Math.min(window.scrollY * (compactMotion.matches ? 0.045 : 0.09), 60);
-    heroPhoto.style.setProperty('--hero-drift', `${distance}px`);
-  }
-  function requestHeroPosition() {
-    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateHeroPosition);
-  }
-  window.addEventListener('scroll', requestHeroPosition, { passive: true });
-  updateHeroPosition();
   motionPreference.addEventListener('change', event => {
     if (!event.matches) return;
     revealObserver.disconnect();
     activeReveals.forEach(animations => animations.forEach(animation => animation.cancel()));
     activeReveals.clear();
-    window.removeEventListener('scroll', requestHeroPosition);
-    cancelAnimationFrame(scrollFrame);
-    heroPhoto.style.removeProperty('--hero-drift');
   });
 }
