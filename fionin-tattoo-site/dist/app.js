@@ -130,3 +130,43 @@ if ('IntersectionObserver' in window) {
   observer.observe(document.querySelector('#booking'));
   observer.observe(document.querySelector('.full-footer'));
 }
+
+// Animate each block once as it enters the viewport. Content stays available
+// without animation support, and keyboard focus never waits for a reveal.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!motionPreference.matches && 'IntersectionObserver' in window && Element.prototype.animate) {
+  const activeReveals = new Map();
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      revealObserver.unobserve(element);
+      if (element.contains(document.activeElement)) return;
+      const siblings = [...element.parentElement.children].filter(child => child.classList.contains('motion-target') && !child.hidden);
+      const delay = Math.min(Math.max(siblings.indexOf(element), 0), 3) * 70;
+      const animation = element.animate([
+        { opacity: 0, transform: 'translateY(24px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], { duration: 700, delay, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'backwards' });
+      activeReveals.set(element, animation);
+      animation.onfinish = animation.oncancel = () => activeReveals.delete(element);
+    });
+  }, { threshold: 0.06 });
+
+  document.querySelectorAll('.section-header, .work-toolbar, .work-card, .work-bottom, .service-intro, .service-row, .faq-layout > div:first-child, .faq-list details, .booking-intro, #booking-form, .contacts-section .section-label, .contacts-heading, .contact-grid > div, .footer-inner').forEach(element => {
+    element.classList.add('motion-target');
+    revealObserver.observe(element);
+  });
+  document.addEventListener('focusin', event => {
+    const element = event.target.closest('.motion-target');
+    if (!element) return;
+    revealObserver.unobserve(element);
+    activeReveals.get(element)?.cancel();
+  });
+  motionPreference.addEventListener('change', event => {
+    if (!event.matches) return;
+    revealObserver.disconnect();
+    activeReveals.forEach(animation => animation.cancel());
+    activeReveals.clear();
+  });
+}
