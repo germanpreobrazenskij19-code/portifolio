@@ -10,7 +10,7 @@
   <link rel="preload" href="assets/bodoni.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/prata.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="sections.css?v=10">
+  <link rel="stylesheet" href="sections.css?v=11">
   <script src="app.js?v=9" defer></script>
 </head>
 <body>
@@ -38,7 +38,7 @@
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-shot hero-shot--portrait"><img src="assets/hero-back-tattoo.png" alt="Орнаментальная татуировка на спине с чёрными линиями и красными камнями" width="353" height="500" fetchpriority="high"></div>
+    <div class="hero-shot hero-shot--complete"><img src="assets/hero-complete-woman.png" alt="Женщина в полный рост в бордовом платье с открытой спиной и орнаментальной татуировкой с красными камнями" width="1672" height="941" fetchpriority="high"></div>
     <div class="hero-panel">
       <div class="hero-copy"><p class="eyebrow">Татуировки и пирсинг</p><h1 id="hero-title">Личное. Навсегда.</h1></div>
       <div class="hero-actions"><a class="button button-pink" href="#booking">Обсудить идею <svg><use href="#arrow"/></svg></a><a class="button button-outline" href="#works">Смотреть работы</a></div>
@@ -80,7 +80,7 @@
 <dialog id="site-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Закрыть"><svg><use href="#close"/></svg></button><div id="dialog-content"></div></dialog>
 <template id="menu"><p class="eyebrow">Fionin Tattoo</p><h2 id="dialog-title">Меню</h2><nav class="menu-links" aria-label="Мобильное меню"><a href="#works" data-close>Работы</a><a href="#services" data-close>Услуги</a><a href="#faq" data-close>Вопросы</a><a href="#contacts" data-close>Контакты</a><a href="#booking" data-close>Обсудить идею ↗</a></nav></template>
 <template id="privacy"><p class="eyebrow">О записи и данных</p><h2 id="dialog-title">Решение за вами.</h2><p>Форма готовит текст сообщения прямо в вашем браузере. Имя и описание идеи не отправляются на сервер сайта и не сохраняются после перезагрузки.</p><p>Чтобы связаться со студией, скопируйте текст, откройте VK и отправьте его самостоятельно. Запись подтверждается только в разговоре с мастером.</p><p>При открытии внешних ссылок действуют правила соответствующего сервиса.</p></template>
-<template id="photo-info"><p class="eyebrow">О фотографии</p><h2 id="dialog-title">Первый экран.</h2><p>Изображение на первом экране — визуальный референс татуировки.</p><p>В портфолио размещены реальные фотографии из галереи Fionin Tattoo на Яндекс Картах.</p><a class="button button-wine" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">Галерея студии ↗</a></template>
+<template id="photo-info"><p class="eyebrow">О фотографии</p><h2 id="dialog-title">Первый экран.</h2><p>Изображение на первом экране создано с помощью ИИ по визуальному референсу татуировки.</p><p>В портфолио размещены реальные фотографии из галереи Fionin Tattoo на Яндекс Картах.</p><a class="button button-wine" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">Галерея студии ↗</a></template>
 <template id="work-dialog"><img class="lightbox-image" alt=""><div class="lightbox-caption"><h2 id="dialog-title"></h2><div class="lightbox-controls"><button type="button" data-gallery-step="-1" aria-label="Предыдущая работа">←</button><span id="work-position" aria-live="polite"></span><button type="button" data-gallery-step="1" aria-label="Следующая работа">→</button></div></div><p class="lightbox-source">Фото из <a href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">галереи Fionin Tattoo на Яндекс Картах ↗</a></p></template>
 <template id="message-dialog"><p class="eyebrow">Проверьте перед отправкой</p><h2 id="dialog-title">Начало диалога.</h2><p>Скопируйте текст и отправьте его в сообщения сообщества студии. Мастер ответит и подтвердит запись.</p><label for="booking-message" class="tiny-label">Ваше сообщение</label><textarea id="booking-message" class="message-output" readonly></textarea><p class="message-status" role="status">Сообщение ещё не отправлено.</p><div class="message-actions"><button class="button button-wine" id="copy-message" type="button">Скопировать текст</button><a class="button" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Открыть VK ↗</a></div></template>
 </body>
