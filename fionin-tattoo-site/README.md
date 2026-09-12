@@ -1,20 +1,32 @@
 # Fionin Tattoo
 
-Responsive, framework-free HTML/CSS implementation of selected reference 05, with native accessible dialogs and studio contact links.
+Полный адаптивный сайт студии в Рязани: выбранная бордово-розовая композиция первого экрана, настоящее портфолио с фильтрами и просмотром фото, услуги, мастера, этапы работы, отзывы, FAQ, подготовка записи и контакты.
 
-Serve the `dist` folder with any static web server. All fonts and imagery are local; there are no runtime package dependencies.
+## Запуск
 
-## Assets
+Из папки проекта:
 
-`dist/assets/reference.png` is the user-selected AI-generated design reference. CSS clips only its photographic regions into the layout. The wordmark, navigation, main headlines, copy, buttons and panels are real HTML/CSS. Image crops are illustrative and are not the studio's actual portfolio. The gallery dialog links to the real studio's VK community.
+```sh
+python3 -m http.server 4174 --bind 127.0.0.1 --directory dist
+```
 
-Fonts: Bodoni Moda, Prata and Manrope, downloaded from Google Fonts. They are used locally without third-party font requests.
+Откройте http://127.0.0.1:4174/. Сборка и установка зависимостей не нужны. Для любого статического хостинга используйте содержимое `dist`. Файлы `.openai/hosting.json` и `dist` также образуют пакет для существующего проекта Sites.
 
-## Verification
+## Запись
 
-- Compared visually against the 1536 × 1024 reference.
-- Checked mobile layout at 390 × 844: no horizontal overflow, all images load.
-- Verified consultation dialog, mobile navigation, services and close behavior.
-- No browser console errors; JavaScript syntax check passed.
+Форма составляет сообщение из выбранной услуги, мастера, необязательного имени и описания идеи. Посетитель проверяет текст, копирует его и самостоятельно отправляет в VK. Подтверждение сеанса и цены происходят в переписке. Отправка заявки сервером, CRM и онлайн-оплата не имитируются. Личные данные сайт не сохраняет.
 
-Studio phone, address and VK link come from the business listing used in the design analysis. No appointment submission backend is simulated; contact actions open VK or the phone dialer.
+## Содержание и фотографии
+
+- Контакты, услуги и рейтинг: https://yandex.com/maps/org/fionintattoo/133656900972/
+- Отзывы и упоминания мастеров: https://yandex.com/maps/org/fionintattoo/133656900972/reviews/
+- Часы работы и этаж: https://2gis.ru/firm/70000001048501400
+- Официальное сообщество: https://vk.com/fionintattoo
+- Данные проверены 12 сентября 2026. Цены не выдуманы, наличие записи к мастеру подтверждается при обращении. Краткие пересказы отзывов помечены как пересказы.
+- Оригиналы шести фотографий портфолио и их источники перечислены в `references/portfolio-sources.json`. Работы не изменялись, в сетке используется CSS-кадрирование, в просмотре доступно целое фото.
+- `dist/assets/reference.png` — выбранный пользователем сгенерированный референс. Его фотографические области используются только в первом экране и блоке о студии. В интерфейсе есть пояснение «О фотографиях».
+- Шрифты Bodoni Moda, Prata и Manrope хранятся локально. Сторонняя аналитика и внешняя загрузка шрифтов отсутствуют. Карта открывается отдельной ссылкой на карточку студии.
+
+## Проверка
+
+Проверены размеры 1536×1024, 390×844 и 320×740: нет горизонтальной прокрутки страницы. Проверены якорная навигация и мобильное меню, фильтры 6/5/1, просмотр фото и переходы, Escape и возврат фокуса, выбор услуги и мастера, проверка пустой идеи, подготовка и копирование сообщения, раскрытие FAQ. Все локальные изображения загружаются, синтаксис JS корректен, ошибок приложения в консоли нет. Сообщения студии при проверке не отправлялись.

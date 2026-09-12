@@ -10,7 +10,8 @@
   <link rel="preload" href="assets/bodoni.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/prata.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="sections.css?v=2">
+  <script src="app.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержимому</a>
@@ -21,14 +22,14 @@
   <symbol id="vk" viewBox="0 0 24 24"><path d="M3 5h4c.3 5 2.3 7 3.5 7V5H14v4.5c1.3-.2 3-2.3 3.6-4.5H22c-.6 2.8-3 5.2-4.5 6.3 1.5 1 4.2 3.4 4.9 6.7h-4.6c-.8-2.5-2.4-4.4-3.8-4.7V18h-1C6.3 18 3.4 13.4 3 5Z" fill="currentColor"/></symbol>
   <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
 </defs></svg>
-<header class="header">
+<header class="header" id="top">
   <a href="./" class="wordmark" aria-label="Fionin Tattoo — главная">FIONIN TATTOO</a>
   <div class="nav-bar">
     <nav class="desktop-nav" aria-label="Главное меню">
       <a href="#works">Работы</a>
-      <button data-dialog="masters">Мастера</button>
-      <button data-dialog="services">Услуги</button>
-      <button data-dialog="contacts">Контакты</button>
+      <a href="#masters">Мастера</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
     </nav>
     <button class="mobile-menu" data-dialog="menu" aria-label="Открыть меню"><span></span><span></span>Меню</button>
     <a class="location" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/" target="_blank" rel="noopener"><svg><use href="#pin"/></svg><span>Рязань · Островского, 120</span></a>
@@ -40,32 +41,113 @@
     <div class="hero-shot"><img src="assets/reference.png" alt="Модель с цветочной татуировкой на плече и модель с татуировками на руках" width="1536" height="1024" fetchpriority="high"></div>
     <div class="hero-panel">
       <div class="hero-copy"><p class="eyebrow">Татуировки и пирсинг</p><h1 id="hero-title">Личное. Навсегда.</h1></div>
-      <div class="hero-actions"><button class="button button-pink" data-dialog="consult">Обсудить идею <svg><use href="#arrow"/></svg></button><a class="button button-outline" href="#works">Смотреть работы</a></div>
+      <div class="hero-actions"><a class="button button-pink" href="#booking">Обсудить идею <svg><use href="#arrow"/></svg></a><a class="button button-outline" href="#works">Смотреть работы</a></div>
       <p class="margin-note hero-note">Твоя<br>история<br>в надёжных<br>руках<span class="note-rule"></span></p>
     </div>
     <div class="hero-tail" aria-hidden="true"></div>
   </section>
-  <section class="story" id="works" aria-labelledby="story-title">
+  <section class="story" id="about" aria-labelledby="story-title">
     <div class="story-copy">
       <div class="story-eyebrow"><span class="eyebrow">Больше чем украшение</span><span class="rule"></span></div>
       <h2 id="story-title">Тату как часть тебя</h2>
       <p class="body-copy">Индивидуальные татуировки и пирсинг в Рязани.<br> Мы помогаем превращать важные идеи в выразительные<br class="wide-break"> образы, которые остаются с тобой навсегда.</p>
-      <a class="text-link" href="https://vk.com/fionintattoo" target="_blank" rel="noopener"><span class="line"></span>Смотреть работы<svg><use href="#arrow"/></svg></a>
+      <a class="text-link" href="#works"><span class="line"></span>Смотреть работы<svg><use href="#arrow"/></svg></a>
     </div>
     <button class="story-image" data-dialog="gallery" aria-label="Рассмотреть татуировку крупнее"><img src="assets/reference.png" alt="Детальная цветочная татуировка на плече" width="1536" height="1024"><span class="photo-hint">Рассмотреть <span>↗</span></span></button>
     <div class="story-margin"><p class="margin-note">Люди<br>идеи<br>стиль<br>ты<span class="note-rule"></span></p></div>
   </section>
+  <div class="trust-strip"><a href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/reviews/" target="_blank" rel="noopener"><span class="trust-star">★</span><strong>5,0</strong> на Яндекс Картах <span>↗</span></a><span>Эскиз под вашу идею</span><span>Татуировки · Пирсинг</span><span>Рязань, Островского, 120</span></div>
+
+  <section class="section portfolio-section" id="works" aria-labelledby="works-title">
+    <div class="section-top"><p class="eyebrow">01 / Портфолио</p><span class="tiny-label">Детали имеют значение</span></div>
+    <div class="section-heading"><h2 id="works-title">У каждой работы —<br><em>свой характер.</em></h2><div class="section-aside"><p>Крупные композиции и тонкие линии.<br>Найдите то, что откликается вам.</p><a class="underlink" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">Все фотографии студии <span>↗</span></a></div></div>
+    <div class="portfolio-toolbar"><div class="filters" role="group" aria-label="Фильтр портфолио"><button type="button" class="active" data-filter="all" aria-pressed="true">Все работы <span>06</span></button><button type="button" data-filter="tattoo" aria-pressed="false">Татуировки <span>05</span></button><button type="button" data-filter="piercing" aria-pressed="false">Пирсинг <span>01</span></button></div><p id="portfolio-status" class="tiny-label" aria-live="polite">6 работ</p></div>
+    <div class="portfolio-grid">
+      <figure class="work-card" data-category="tattoo"><button class="work-image" data-work="0" aria-label="Открыть фото: рыцарь на руке"><img src="assets/portfolio/knight.jpg" alt="Чёрно-серая татуировка рыцаря с мечом на руке" width="1280" height="1707" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Масштабная история</span><small>Реализм / 01</small></figcaption></figure>
+      <figure class="work-card" data-category="tattoo"><button class="work-image" data-work="1" aria-label="Открыть фото: цветок на лопатке"><img src="assets/portfolio/flower.jpg" alt="Чёрно-серый цветок с плавными линиями на лопатке" width="1080" height="1385" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Плавность линий</span><small>Графика / 02</small></figcaption></figure>
+      <figure class="work-card" data-category="piercing"><button class="work-image" data-work="2" aria-label="Открыть фото: украшение в ухе"><img src="assets/portfolio/piercing.jpg" alt="Пирсинг ушной раковины с украшением в форме веточки" width="1920" height="2560" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Маленький акцент</span><small>Пирсинг / 03</small></figcaption></figure>
+      <figure class="work-card" data-category="tattoo"><button class="work-image horizontal-art" data-work="3" aria-label="Открыть фото: воин на предплечье"><img src="assets/portfolio/warrior.jpg" alt="Чёрно-серая татуировка воина на предплечье" width="1280" height="853" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Сила в деталях</span><small>Реализм / 04</small></figcaption></figure>
+      <figure class="work-card" data-category="tattoo"><button class="work-image" data-work="4" aria-label="Открыть фото: ласточка на предплечье"><img src="assets/portfolio/swallow.jpg" alt="Ласточка с расправленными крыльями на предплечье" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Лёгкость движения</span><small>Графика / 05</small></figcaption></figure>
+      <figure class="work-card" data-category="tattoo"><button class="work-image" data-work="5" aria-label="Открыть фото: цветной портрет воина"><img src="assets/portfolio/color-warrior.jpg" alt="Цветная татуировка воина в шлеме на плече" width="2204" height="3306" loading="lazy"><span class="image-open" aria-hidden="true">↗</span></button><figcaption><span>Характер в цвете</span><small>Цветной реализм / 06</small></figcaption></figure>
+    </div>
+    <div class="portfolio-bottom"><p>Фотографии из галереи и отзывов Fionin Tattoo на Яндекс Картах.</p><a class="underlink" href="#booking">Есть своя идея? Обсудим <span>↗</span></a></div>
+  </section>
+
+  <section class="section services-section" id="services" aria-labelledby="services-title">
+    <div class="section-top"><p class="eyebrow">02 / Услуги</p><span class="tiny-label">От задумки до воплощения</span></div>
+    <div class="split-section"><div class="section-intro"><h2 id="services-title">Ваша идея.<br><em>Наше ремесло.</em></h2><p>Начнём с разговора. Подберём формат работы, обсудим детали и заранее согласуем стоимость.</p><a class="underlink" href="#booking">Узнать стоимость <span>↗</span></a></div>
+    <div class="service-list">
+      <article class="service-item"><span class="item-number">01</span><div><h3>Татуировка</h3><p>От небольшого символа до сложной композиции. Обсудим рисунок, размер и расположение на теле.</p><div class="service-tags"><span>Индивидуальный эскиз</span><span>Работа с референсами</span></div></div><a href="#booking" data-service="Татуировка" class="circle-link" aria-label="Обсудить татуировку">↗</a></article>
+      <article class="service-item"><span class="item-number">02</span><div><h3>Пирсинг</h3><p>Поможем выбрать прокол и украшение. Вопросы по процедуре и уходу обсудим с мастером.</p><div class="service-tags"><span>Проколы</span><span>Подбор украшений</span></div></div><a href="#booking" data-service="Пирсинг" class="circle-link" aria-label="Обсудить пирсинг">↗</a></article>
+      <article class="service-item"><span class="item-number">03</span><div><h3>Коррекция тату</h3><p>Хотите изменить прежнюю работу? Пришлите её фото — мастер оценит возможные варианты.</p><div class="service-tags"><span>Оценка по фото</span><span>Новая композиция</span></div></div><a href="#booking" data-service="Коррекция тату" class="circle-link" aria-label="Обсудить коррекцию татуировки">↗</a></article>
+      <article class="service-item"><span class="item-number">04</span><div><h3>Подарочный сертификат</h3><p>Подарок с местом для личного выбора. Номинал и условия использования уточним при оформлении.</p><div class="service-tags"><span>Для близкого человека</span></div></div><a href="#booking" data-service="Сертификат" class="circle-link" aria-label="Обсудить подарочный сертификат">↗</a></article>
+    </div></div>
+  </section>
+
+  <section class="section team-section" id="masters" aria-labelledby="masters-title">
+    <div class="section-top"><p class="eyebrow">03 / Мастера</p><span class="tiny-label">За каждой линией — человек</span></div>
+    <div class="section-heading"><h2 id="masters-title">Важно найти<br><em>своего мастера.</em></h2><p class="section-aside">Можно прийти с готовым замыслом<br>или начать с «хочу, но не знаю что».<br>Разберёмся вместе.</p></div>
+    <div class="team-list">
+      <article><span class="item-number">01</span><h3>Роман Фионин</h3><p>Татуировка и пирсинг</p><a href="#booking" data-master="Роман Фионин" aria-label="Обсудить запись к Роману Фионину">Обсудить запись <span>↗</span></a></article>
+      <article><span class="item-number">02</span><h3>Мария</h3><p>Татуировка</p><a href="#booking" data-master="Мария" aria-label="Обсудить запись к Марии">Обсудить запись <span>↗</span></a></article>
+      <article><span class="item-number">03</span><h3>Ян Фоменко</h3><p>Татуировка</p><a href="#booking" data-master="Ян Фоменко" aria-label="Обсудить запись к Яну Фоменко">Обсудить запись <span>↗</span></a></article>
+    </div>
+    <div class="section-end"><p>Свободное время и запись к выбранному мастеру уточняем в переписке.</p><a href="https://vk.com/fionintattoo" target="_blank" rel="noopener" class="underlink">Больше о студии в VK <span>↗</span></a></div>
+  </section>
+
+  <section class="section process-section" id="process" aria-labelledby="process-title">
+    <div class="section-top"><p class="eyebrow">04 / Первая встреча</p><span class="tiny-label">Шаг за шагом</span></div>
+    <div class="split-section"><div class="section-intro"><h2 id="process-title">Большая идея.<br><em>Понятный путь.</em></h2><p>Первая татуировка или продолжение вашей истории — начнём с того, что важно именно вам.</p><a class="button button-pink" href="#booking">Сделать первый шаг <svg><use href="#arrow"/></svg></a></div>
+    <ol class="process-list"><li><span>01</span><div><h3>Знакомимся с идеей</h3><p>Вы рассказываете о задумке и показываете референсы. Мы задаём вопросы, обсуждаем место, размер и детали.</p></div></li><li><span>02</span><div><h3>Согласуем эскиз и сеанс</h3><p>Определяем композицию, стоимость и подходящее время. Перед сеансом мастер объяснит, как подготовиться.</p></div></li><li><span>03</span><div><h3>Воплощаем и остаёмся на связи</h3><p>Работаем над татуировкой и рассказываем об уходе. Если появятся вопросы — напишите мастеру.</p></div></li></ol></div>
+  </section>
+
+  <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+    <div class="section-top"><p class="eyebrow">05 / Доверие</p><a href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/reviews/" target="_blank" rel="noopener" class="underlink">Отзывы на Яндекс Картах <span>↗</span></a></div>
+    <div class="section-heading"><h2 id="reviews-title">После сеанса<br><em>остаются слова.</em></h2><a class="rating-block" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/reviews/" target="_blank" rel="noopener" aria-label="Рейтинг 5 из 5 на Яндекс Картах"><strong>5,0</strong><div><span aria-hidden="true">★★★★★</span><small>на Яндекс Картах</small></div></a></div>
+    <div class="review-grid"><article><span class="review-mark" aria-hidden="true">✳</span><p>Роман помог подобрать украшения и доработать эскиз. В отзыве особенно отмечены внимательное общение и уютная студия.</p><div><strong>Женя Женечка</strong><span>Татуировка и пирсинг</span></div><small>Кратко из отзыва на Яндекс Картах</small></article><article><span class="review-mark" aria-hidden="true">✳</span><p>Перед первой татуировкой мастер объяснил этапы, уход и заживление. Помог определиться с рисунком и ответил на вопросы.</p><div><strong>Анастасия Б.</strong><span>Первый опыт</span></div><small>Кратко из отзыва на Яндекс Картах</small></article><article><span class="review-mark" aria-hidden="true">✳</span><p>Мария помогла воплотить личную идею. Клиентка отметила чуткость, комфорт на сеансе и внимание к пожеланиям.</p><div><strong>Валентина Катаева</strong><span>Татуировка</span></div><small>Кратко из отзыва на Яндекс Картах</small></article></div>
+  </section>
+
+  <section class="section faq-section" id="faq" aria-labelledby="faq-title"><div class="split-section"><div class="section-intro"><p class="eyebrow">06 / Вопросы</p><h2 id="faq-title">Можно<br><em>спросить всё.</em></h2><p>Не нашли свой вопрос?<br>Напишите — обсудим лично.</p><a class="underlink" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Задать вопрос в VK <span>↗</span></a></div>
+    <div class="faq-list">
+      <details><summary>Сколько будет стоить моя татуировка?<span aria-hidden="true">+</span></summary><p>Цена зависит от размера, сложности рисунка, места нанесения и объёма работы. Пришлите идею, примерный размер и референсы — мастер оценит стоимость до записи.</p></details>
+      <details><summary>Обязательно приходить с готовым эскизом?<span aria-hidden="true">+</span></summary><p>Нет. Достаточно описать идею или показать несколько примеров того, что вам нравится. Мастер поможет определить композицию и детали.</p></details>
+      <details><summary>Можно изменить старую татуировку?<span aria-hidden="true">+</span></summary><p>Начнём с фотографии существующей работы. Возможность коррекции и подходящий рисунок зависят от её размера, цвета и состояния — это оценит мастер.</p></details>
+      <details><summary>Что нужно знать перед первым сеансом?<span aria-hidden="true">+</span></summary><p>Заранее обсудите с мастером место нанесения, длительность и подготовку. О любых обстоятельствах, которые могут повлиять на процедуру, сообщите до записи.</p></details>
+      <details><summary>Как ухаживать за татуировкой или проколом?<span aria-hidden="true">+</span></summary><p>Мастер объяснит уход после вашей процедуры. Следуйте выданным рекомендациям, а если что-то вызывает вопросы — свяжитесь со студией.</p></details>
+      <details><summary>Как перенести запись?<span aria-hidden="true">+</span></summary><p>Напишите в тот же диалог, где договаривались о сеансе, или позвоните в студию. Сообщите о переносе заранее, чтобы подобрать новое время.</p></details>
+    </div></div></section>
+
+  <section class="section booking-section" id="booking" aria-labelledby="booking-title">
+    <div class="section-top"><p class="eyebrow">07 / Начнём с разговора</p><span class="tiny-label">Ваша следующая история</span></div>
+    <div class="split-section"><div class="section-intro"><h2 id="booking-title">Та самая идея.<br><em>Давайте <br>обсудим.</em></h2><p>Несколько слов о задумке — и у нас уже есть отправная точка.</p><a href="tel:+79109080725" class="booking-phone">+7 (910) 908-07-25</a><span class="tiny-label">Если удобнее поговорить</span></div>
+    <form id="booking-form">
+      <fieldset class="service-choice"><legend>Что хотите обсудить?</legend><div><label><input type="radio" name="service" value="Татуировка" checked><span>Татуировка</span></label><label><input type="radio" name="service" value="Пирсинг"><span>Пирсинг</span></label><label><input type="radio" name="service" value="Коррекция тату"><span>Коррекция</span></label><label><input type="radio" name="service" value="Сертификат"><span>Сертификат</span></label></div></fieldset>
+      <div class="form-pair"><label>Как к вам обращаться <span class="optional">необязательно</span><input name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя"></label><label>Мастер<select name="master" id="master-select"><option>Помогите выбрать</option><option>Роман Фионин</option><option>Мария</option><option>Ян Фоменко</option></select></label></div>
+      <label>Расскажите об идее <span class="required-note">обязательно</span><textarea name="idea" id="idea" rows="4" required minlength="10" maxlength="1500" placeholder="Например: хочу цветок на предплечье, примерно 10 см. Это моя первая татуировка." aria-describedby="idea-hint"></textarea></label>
+      <div class="field-caption"><span id="idea-hint">Место, примерный размер, стиль — если уже знаете.</span><span id="idea-counter">0 / 1500</span></div>
+      <button class="button button-pink prepare-button" type="submit">Подготовить сообщение <svg><use href="#arrow"/></svg></button>
+      <p class="form-explainer">Вы сможете проверить текст, скопировать его и отправить студии в VK. Время и стоимость подтвердит мастер.</p>
+      <noscript><p>Для подготовки текста включите JavaScript или <a href="https://vk.com/fionintattoo" target="_blank" rel="noopener">напишите студии в VK</a>.</p></noscript>
+    </form></div>
+  </section>
+
+  <section class="section contacts-section" id="contacts" aria-labelledby="contacts-title">
+    <div class="section-top"><p class="eyebrow">08 / Студия</p><span class="tiny-label">До встречи в Рязани</span></div>
+    <div class="contacts-grid"><div><h2 id="contacts-title">Место для<br><em>вашей истории.</em></h2><address><p class="contact-address">Рязань, Островского, 120</p><p>2 этаж · рядом с остановкой «Лицей № 7»</p><p>Ежедневно, 10:00–20:00<br>По предварительной записи</p><a href="tel:+79109080725">+7 (910) 908-07-25</a></address><div class="contact-actions"><a class="button button-wine" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/" target="_blank" rel="noopener">Построить маршрут <svg><use href="#arrow"/></svg></a><a href="https://vk.com/fionintattoo" target="_blank" rel="noopener" class="underlink">Написать в VK <span>↗</span></a></div></div>
+    <div class="map-panel"><div id="map-placeholder"><svg><use href="#pin"/></svg><p>Fionin Tattoo</p><span>Островского, 120 · Рязань</span><a class="button button-wine" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/" target="_blank" rel="noopener">Открыть карту <svg><use href="#arrow"/></svg></a><small>Адрес, фотографии входа и маршрут на Яндекс Картах</small></div><a class="map-external" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/" target="_blank" rel="noopener">Открыть в Яндекс Картах ↗</a></div></div>
+  </section>
 </main>
-<footer><span>FIONIN TATTOO</span><a href="tel:+79109080725">+7 (910) 908-07-25</a><button data-dialog="contacts">Рязань · Островского, 120 <span>↗</span></button></footer>
+<footer class="full-footer"><div class="footer-top"><span class="eyebrow">Личное. Навсегда.</span><nav aria-label="Меню в подвале"><a href="#works">Работы</a><a href="#masters">Мастера</a><a href="#services">Услуги</a><a href="#booking">Запись</a></nav><a href="#top" class="back-top">Наверх ↑</a></div><a href="./" class="footer-wordmark">FIONIN TATTOO</a><div class="footer-bottom"><span>© <span id="year">2026</span> Fionin Tattoo · Рязань</span><button data-dialog="privacy">О записи и данных</button><button data-dialog="photo-info">О фотографиях</button><a href="https://vk.com/fionintattoo" target="_blank" rel="noopener" aria-label="Сообщество Fionin Tattoo во ВКонтакте"><svg><use href="#vk"/></svg></a></div></footer>
+<a href="#booking" class="mobile-booking">Обсудить идею <svg><use href="#arrow"/></svg></a>
 <dialog id="site-dialog" aria-labelledby="dialog-title">
   <button class="dialog-close" aria-label="Закрыть"><svg><use href="#close"/></svg></button>
   <div id="dialog-content"></div>
 </dialog>
-<template id="consult"><p class="eyebrow">Начнём с идеи</p><h2 id="dialog-title">Обсудим вашу<br>татуировку?</h2><p>Расскажите, что вы задумали. Пришлите референсы в VK или позвоните — обсудим эскиз, размер и запись.</p><a class="button button-wine" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Написать в VK <svg><use href="#arrow"/></svg></a><a class="phone" href="tel:+79109080725">+7 (910) 908-07-25</a><p class="dialog-meta">Рязань · Островского, 120</p></template>
-<template id="contacts"><p class="eyebrow">Fionin Tattoo</p><h2 id="dialog-title">Будем на связи.</h2><p>Рязань, улица Островского, 120</p><a class="phone" href="tel:+79109080725">+7 (910) 908-07-25</a><div class="dialog-links"><a class="button button-wine" href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/" target="_blank" rel="noopener">Открыть карту <svg><use href="#arrow"/></svg></a><a class="button" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Написать в VK <svg><use href="#arrow"/></svg></a></div></template>
-<template id="services"><p class="eyebrow">Fionin Tattoo</p><h2 id="dialog-title">Татуировки<br>и пирсинг.</h2><div class="service-row"><span>01</span><div><h3>Татуировки</h3><p>Обсуждение идеи и индивидуального эскиза.</p></div></div><div class="service-row"><span>02</span><div><h3>Пирсинг</h3><p>Выбор прокола и украшения.</p></div></div><p>Стоимость и свободное время уточняйте при записи.</p><button class="button button-wine" data-dialog="consult">Обсудить идею <svg><use href="#arrow"/></svg></button></template>
-<template id="masters"><p class="eyebrow">Люди за работами</p><h2 id="dialog-title">Найдём вашего<br>мастера.</h2><p>Посмотрите работы и познакомьтесь со студией в нашем сообществе. Пришлите идею — обсудим, кому её доверить.</p><a class="button button-wine" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Познакомиться в VK <svg><use href="#arrow"/></svg></a></template>
-<template id="menu"><p class="eyebrow">Fionin Tattoo</p><h2 id="dialog-title">Меню</h2><nav class="menu-links" aria-label="Мобильное меню"><a href="#works" data-close>Работы</a><button data-dialog="masters">Мастера</button><button data-dialog="services">Услуги</button><button data-dialog="contacts">Контакты</button></nav></template>
+<template id="menu"><p class="eyebrow">Fionin Tattoo</p><h2 id="dialog-title">Меню</h2><nav class="menu-links" aria-label="Мобильное меню"><a href="#works" data-close>Работы</a><a href="#masters" data-close>Мастера</a><a href="#services" data-close>Услуги</a><a href="#faq" data-close>Вопросы</a><a href="#contacts" data-close>Контакты</a><a href="#booking" data-close>Обсудить идею ↗</a></nav></template>
 <template id="gallery"><p class="eyebrow">Детали</p><h2 id="dialog-title">В каждой линии.</h2><div class="gallery-photo"><img src="assets/reference.png" alt="Цветочная татуировка — иллюстрация выбранного дизайна" width="1536" height="1024"></div><p class="dialog-meta">Иллюстрация из дизайн-концепции. Реальное портфолио студии — в VK.</p><a class="button button-wine" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Работы студии <svg><use href="#arrow"/></svg></a></template>
+<template id="privacy"><p class="eyebrow">О записи и данных</p><h2 id="dialog-title">Решение за вами.</h2><p>Форма готовит текст сообщения прямо в вашем браузере. Имя и описание идеи не отправляются на сервер сайта и не сохраняются после перезагрузки.</p><p>Чтобы связаться со студией, скопируйте текст, откройте VK и отправьте его самостоятельно. Запись подтверждается только в разговоре с мастером.</p><p>При открытии внешних ссылок действуют правила соответствующего сервиса.</p></template>
+<template id="photo-info"><p class="eyebrow">О фотографиях</p><h2 id="dialog-title">Образы и работы.</h2><p>Фотографии в первом экране и блоке «Тату как часть тебя» — иллюстрации выбранной дизайн-концепции, созданные с помощью ИИ.</p><p>В разделе «Портфолио» — реальные фотографии из галереи и отзывов Fionin Tattoo на Яндекс Картах. Они представлены без изменения самих работ.</p><div class="source-links"><a href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">Галерея студии на Яндекс Картах ↗</a><a href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Сообщество студии в VK ↗</a></div></template>
+<template id="work-dialog"><img class="lightbox-image" alt=""><div class="lightbox-caption"><h2 id="dialog-title"></h2><div class="lightbox-controls"><button type="button" data-gallery-step="-1" aria-label="Предыдущая работа">←</button><span id="work-position" aria-live="polite"></span><button type="button" data-gallery-step="1" aria-label="Следующая работа">→</button></div></div><p class="lightbox-source">Фото из <a href="https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/" target="_blank" rel="noopener">галереи Fionin Tattoo на Яндекс Картах ↗</a></p></template>
+<template id="message-dialog"><p class="eyebrow">Проверьте перед отправкой</p><h2 id="dialog-title">Начало диалога.</h2><p>Скопируйте текст и отправьте его в сообщения сообщества студии. Мастер ответит и подтвердит запись.</p><label for="booking-message" class="tiny-label">Ваше сообщение</label><textarea id="booking-message" class="message-output" readonly></textarea><p class="message-status" role="status">Сообщение ещё не отправлено.</p><div class="message-actions"><button class="button button-wine" id="copy-message" type="button">Скопировать текст</button><a class="button" href="https://vk.com/fionintattoo" target="_blank" rel="noopener">Открыть VK ↗</a></div></template>
 </body>
 </html>
