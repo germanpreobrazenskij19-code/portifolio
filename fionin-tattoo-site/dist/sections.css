@@ -90,3 +90,22 @@
 .booking-section .booking-steps{border-color:#b18b82}
 .booking-section form{box-shadow:0 20px 70px #19091230}
 @media(max-width:760px){.services-section .price-note{margin-top:30px}.section-backdrop:after{background:rgba(49,17,30,.86)}.booking-section .section-backdrop:after{background:rgba(38,15,25,.84)}.booking-section .section-backdrop img{object-position:60% center}}
+
+/* Service catalog and real photographs from the studio listing. */
+.services-layout{grid-template-columns:.8fr 1.4fr;gap:6vw;align-items:start}
+.services-section .section-backdrop img{object-position:30% center}
+.services-section .section-backdrop:after{background:linear-gradient(100deg,rgba(40,15,26,.88),rgba(49,17,30,.94))}
+.services-photo-credit{margin-top:34px;font-size:11px;line-height:1.8;color:#ddc5b5}
+.service-row{grid-template-columns:130px minmax(0,1fr) 24px;gap:24px;padding:28px 0;align-items:start}
+.service-photo{display:block;position:relative;overflow:hidden;background:#39232b}
+.service-photo img{display:block;width:100%;height:164px;object-fit:cover}
+.service-photo>span{display:block;padding:8px 5px;font-size:9px;line-height:1.5;text-align:center;color:var(--pink)}
+.service-row .service-number{display:block;font-size:9px;letter-spacing:.14em;margin:0 0 12px}
+.service-row h3{font-size:clamp(24px,2.2vw,33px);line-height:1.2;margin-bottom:12px}
+.service-row p{font-size:12px;line-height:1.8}
+.service-row .service-price{font-size:18px;line-height:1.4;color:var(--pink);margin:0 0 10px}
+.service-price small{font-size:12px}
+.service-row .service-arrow{font-size:25px}
+@media(max-width:1100px) and (min-width:761px){.services-layout{grid-template-columns:.7fr 1.3fr;gap:36px}.service-row{grid-template-columns:100px minmax(0,1fr) 20px;gap:18px}.service-photo img{height:150px}.services-section h2{font-size:42px}}
+@media(max-width:760px){.services-layout{display:block}.services-photo-credit{margin:0 0 32px}.service-row{grid-template-columns:94px minmax(0,1fr) 18px;gap:14px;padding:26px 0}.service-photo img{height:132px}.service-row h3{font-size:24px}.service-row .service-number{font-size:8px;letter-spacing:.06em}.service-row .service-arrow{font-size:22px}.service-row p{font-size:12px}.service-row .service-price{font-size:17px}.services-section .section-backdrop:after{background:rgba(40,15,26,.93)}}
+@media(max-width:370px){.service-row{grid-template-columns:78px minmax(0,1fr) 14px;gap:10px}.service-row h3{font-size:22px}.service-photo img{height:120px}}

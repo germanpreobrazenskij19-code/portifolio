@@ -10,4 +10,4 @@ The chosen hero photograph is the visual reference for the entire site: warm pla
 - Responsive: 72px header and single-column content on phones; 88px header on desktop. Hero keeps the full image at every width. Sticky header and mobile booking control have scroll offsets.
 - Authenticity: gallery photos are from the existing studio source list; hero is AI-generated from the supplied reference. Do not present the hero model as a member of staff or a real client.
 
-Services and booking use full-section decorative photographs with dark burgundy scrims. Booking text is light and its form stays opaque cream; FAQ retains an inline photograph. Background images are aria-hidden and lazy-loaded.
+Services uses a real photograph of the studio artist with a dark burgundy scrim, plus real photographs beside its four service categories. The tattooage row uses a clearly captioned studio interior photo. Prices follow the Maps catalog with a stale-price note. Booking uses a generated decorative photograph with a dark burgundy scrim. Booking text is light and its form stays opaque cream; FAQ retains an inline photograph. Background images are aria-hidden and lazy-loaded.

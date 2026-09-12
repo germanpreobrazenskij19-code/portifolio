@@ -1,0 +1,60 @@
+{
+  "checkedOn": "2026-09-12",
+  "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/prices/",
+  "sourceNote": "Давно не обновлялось. Источник: Представитель организации",
+  "services": [
+    {
+      "name": "Татуировка",
+      "priceRub": 3000,
+      "unit": "1 ч"
+    },
+    {
+      "name": "Пирсинг мочки",
+      "priceRub": 990,
+      "description": "Пирсинг от 990₽"
+    },
+    {
+      "name": "Дополнительные проколы мочки",
+      "priceRub": 990
+    },
+    {
+      "name": "Прокол «хеликс»",
+      "priceRub": 1690
+    },
+    {
+      "name": "Татуаж",
+      "priceRub": 2490,
+      "description": "Татуаж от 2490"
+    },
+    {
+      "name": "Украшения для пирсинга",
+      "priceRub": 2500,
+      "description": "Уточняйте по телефону",
+      "note": "В каталоге также есть украшения с индивидуальными ценами; общей минимальной цены на сайте не заявляем."
+    }
+  ],
+  "photos": [
+    {
+      "file": "assets/services/studio-process.jpg",
+      "sourceUrl": "https://avatars.mds.yandex.net/get-altay/8093564/2a0000018610a8a57e460eaefe33dcc9520f/XXXL",
+      "caption": "Мастер студии за работой",
+      "width": 1024,
+      "height": 683
+    },
+    {
+      "file": "assets/services/studio-interior.jpg",
+      "sourceUrl": "https://avatars.mds.yandex.net/get-altay/10703420/2a0000018a367af619b8b62bc90af638fda4/XXXL",
+      "caption": "Зеркало и интерьер студии; не пример татуажа",
+      "width": 960,
+      "height": 1280
+    },
+    {
+      "file": "assets/services/jewelry.jpg",
+      "sourceUrl": "https://avatars.mds.yandex.net/get-altay/11492238/2a0000018e5f71f14259d494d543170e5985/XXXL",
+      "caption": "Кольцо для пирсинга на красном фоне",
+      "width": 960,
+      "height": 1280
+    }
+  ],
+  "existingPhotos": "Фото татуировки и пирсинга: assets/portfolio/flower.jpg и piercing.jpg, источники в portfolio-sources.json."
+}
