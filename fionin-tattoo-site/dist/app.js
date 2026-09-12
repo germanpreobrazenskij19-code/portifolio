@@ -47,8 +47,6 @@ document.addEventListener('click', event => {
   if (step) stepWork(Number(step.dataset.galleryStep));
   const service = event.target.closest('[data-service]');
   if (service) [...form.elements.service].forEach(input => { input.checked = input.value === service.dataset.service; });
-  const master = event.target.closest('[data-master]');
-  if (master) form.elements.master.value = master.dataset.master;
 });
 dialog.addEventListener('click', event => {
   if (event.target !== dialog) return;
@@ -106,7 +104,7 @@ form.addEventListener('submit', event => {
   const lines = ['Здравствуйте! Хочу обсудить запись в Fionin Tattoo.'];
   if (form.elements.name.value.trim()) lines.push(`Меня зовут ${form.elements.name.value.trim()}.`);
   lines.push(`Услуга: ${form.elements.service.value}.`);
-  lines.push(`Мастер: ${form.elements.master.value}.`, '', idea.value.trim(), '', 'Подскажите, пожалуйста, стоимость и свободное время.');
+  lines.push( '', idea.value.trim(), '', 'Подскажите, пожалуйста, стоимость и свободное время.');
   openDialog('message-dialog', event.submitter);
   content.querySelector('#booking-message').value = lines.join('\n');
   content.querySelector('#copy-message').addEventListener('click', async () => {
