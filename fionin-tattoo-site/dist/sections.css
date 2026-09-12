@@ -75,3 +75,8 @@ footer.full-footer{display:block;background:var(--paper);border-top:1px solid va
 .hero-shot.hero-shot--complete img{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center;translate:none;scale:1;animation-name:hero-scene-enter}
 @keyframes hero-scene-enter{from{opacity:0}to{opacity:1}}
 @media(max-width:760px){.hero-shot.hero-shot--complete{height:110vw;aspect-ratio:auto}.hero-shot.hero-shot--complete img{object-fit:cover;object-position:59% center}}
+
+:root{--header-height:calc(10.7421875vw + max(41px,2.6692708vw))}
+html{scroll-padding-top:calc(var(--header-height) + 16px)}
+.header{position:sticky;top:0;z-index:10;box-shadow:0 1px 0 #581e2d1a}
+@media(max-width:760px){:root{--header-height:calc(max(74px,18vw) + 52px)}}
