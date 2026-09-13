@@ -60,17 +60,6 @@
     "file": "assets/portfolio/flower.jpg"
   },
   {
-    "file": "assets/portfolio/fox.jpg",
-    "sourceUrl": "https://avatars.mds.yandex.net/get-altay/13265642/2a000001940e50c5d5b9f2fc54b7ee196fe9/XXXL",
-    "category": "tattoo",
-    "alt": "Цветная татуировка лисы под контуром волка",
-    "caption": "Лиса · цветной реализм",
-    "width": 720,
-    "height": 1280,
-    "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/",
-    "checkedOn": "2026-09-12"
-  },
-  {
     "file": "assets/portfolio/surreal.jpg",
     "sourceUrl": "https://avatars.mds.yandex.net/get-altay/10632051/2a00000190944f265e4336f2d4b4b559d8fb/XXXL",
     "category": "tattoo",
@@ -80,5 +69,17 @@
     "height": 1280,
     "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/",
     "checkedOn": "2026-09-12"
+  },
+  {
+    "file": "assets/portfolio/back-ornament.jpg",
+    "sourceUrl": "https://avatars.mds.yandex.net/get-altay/6213366/2a0000018d9c39dbac008835158fba481007/XXXL",
+    "sourcePage": "https://yandex.ru/maps/org/fionin_tattoo/133656900972/gallery/",
+    "category": "tattoo",
+    "width": 905,
+    "height": 1280,
+    "alt": "Орнамент на спине с красным камнем и тонкими чёрными линиями",
+    "caption": "Орнамент на спине",
+    "checkedOn": "2026-09-13",
+    "note": "То же изображение, которое пользователь прислал для херо; версия из галереи студии большего размера."
   }
 ]

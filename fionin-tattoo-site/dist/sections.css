@@ -109,3 +109,6 @@
 @media(max-width:1100px) and (min-width:761px){.services-layout{grid-template-columns:.7fr 1.3fr;gap:36px}.service-row{grid-template-columns:100px minmax(0,1fr) 20px;gap:18px}.service-photo img{height:150px}.services-section h2{font-size:42px}}
 @media(max-width:760px){.services-layout{display:block}.services-photo-credit{margin:0 0 32px}.service-row{grid-template-columns:94px minmax(0,1fr) 18px;gap:14px;padding:26px 0}.service-photo img{height:132px}.service-row h3{font-size:24px}.service-row .service-number{font-size:8px;letter-spacing:.06em}.service-row .service-arrow{font-size:22px}.service-row p{font-size:12px}.service-row .service-price{font-size:17px}.services-section .section-backdrop:after{background:rgba(40,15,26,.93)}}
 @media(max-width:370px){.service-row{grid-template-columns:78px minmax(0,1fr) 14px;gap:10px}.service-row h3{font-size:22px}.service-photo img{height:120px}}
+
+.work-image--back{background:#fff}
+.work-card .work-image--back img{object-fit:contain;object-position:center}
