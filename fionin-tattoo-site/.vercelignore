@@ -1,0 +1,6 @@
+.openai
+.sites-runtime
+references
+README.md
+DESIGN.md
+*.tar.gz
