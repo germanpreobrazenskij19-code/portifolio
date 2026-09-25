@@ -1,0 +1,7 @@
+Используй bundled skill imagine и tool reference_to_video. Сделай ровно ОДИН финальный видеоролик для фона hero-секции сайта из файла /Users/retention/Documents/auto/output/radost-turbo-hero/assets/grok-hero-source.png.
+
+Это image-to-video, не создавай новый исходный кадр через image_gen и не редактируй HTML/CSS/JS. Укажи этот PNG одновременно как exact first_frame и exact last_frame, чтобы получился бесшовный loop. Длительность 6 секунд, 720p, без звука, landscape; выбери поддерживаемое aspect_ratio, ближайшее к исходному 1536×734, без вертикального кропа руки и без изменения композиции.
+
+Промпт для видео: «Locked-off premium editorial tattoo studio hero. The tattooed arm, skin, black fabric, camera framing and all tattoo lines remain perfectly fixed and sharp. Only the thin golden sacred-geometry construction lines slowly rotate by a few degrees and softly pulse; a very subtle warm light glides across the gold, while the black background breathes almost imperceptibly. No body movement, no camera travel, no zoom, no morphing, no new objects, no text, no particles. End exactly where the clip started for a seamless refined loop.»
+
+После генерации проверь результат и скопируй финальный MP4 в /Users/retention/Documents/auto/output/radost-turbo-hero/assets/grok-hero-loop.mp4. Если tool вернёт ограничение тарифа, storage error или moderation block — остановись и сообщи точную ошибку, не подменяй видео CSS-анимацией и не используй другой генератор.
