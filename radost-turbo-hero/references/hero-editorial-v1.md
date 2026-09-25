@@ -1,0 +1,8 @@
+# Editorial hero — one variant
+
+Built-in imagegen, 25 September 2026. Final asset: `assets/hero-editorial-v1.jpg`.
+Art direction: supplied Velocity reference; edit target: existing `assets/grok-back-end.png`.
+
+## Generation prompt
+
+Use case: style-transfer. Create ONE full-bleed photographic background for a minimalist tattoo artist website, landscape 16:9, no text or graphic design baked in. Image 1 is the EDIT TARGET: preserve the adult woman's identity, back tattoo design, anatomy and hand pose. Image 2 is only ART DIRECTION reference: quiet charcoal studio, exceptional sculptural directional light, tactile editorial photography, restraint, large negative space. Transform image 1 into an expensive fashion/editorial photograph. Remove white room, plant and furniture details; replace with a seamless deep charcoal/soft warm grey studio background and subtle physical shadows. Center the seated woman's entire tattooed back at x=60% of frame, visible from head through black clothing at hips; subject occupies 65% of image height and lower two thirds of composition, head around y=18%. Keep the left 35% mostly empty dark space. Natural skin tone slightly warm copper from directional window light on shoulder, neutral black ink with crisp detail. Gentle grain, rich real shadows, no yellow haze, no glow, no smoke, no artificial ornaments. Keep background smoothly dark but not crushed black; high-end photographic realism. No sexual emphasis, no nudity beyond back, black clothing below waist. Do not add lettering, logos, border, frame, UI or watermark. The final web layout will overlay enormous pale serif typography across the middle.

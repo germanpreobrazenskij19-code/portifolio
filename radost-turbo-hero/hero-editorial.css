@@ -1,0 +1,89 @@
+/* One editorial hero: large typography, a single photograph, quiet navigation. */
+.hero.hero-editorial{
+  position:relative;isolation:isolate;display:block;height:100svh;min-height:640px;
+  max-height:1200px;padding:0;overflow:hidden;background:#191a18;color:#f1eee7;
+  border:0;
+}
+.editorial-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:center 48%;z-index:-2;
+}
+.hero-editorial:after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,#0003,transparent 20% 72%,#0009);
+}
+.editorial-title{position:absolute;left:3.2%;right:3.2%;top:32%;mix-blend-mode:difference}
+.editorial-title p{
+  margin:0 0 30px 9px;font:400 10px/1.5 Manrope,Arial,sans-serif;
+  letter-spacing:.22em;text-transform:uppercase;color:#f1eee7;
+}
+.hero-editorial h1{
+  font-family:var(--serif);font-weight:300;font-size:22vw;line-height:.74;
+  letter-spacing:-.064em;max-width:none;margin:0;padding:0;color:#f1eee7;
+  white-space:nowrap;text-shadow:none;
+}
+.editorial-footer{
+  position:absolute;left:4%;right:4%;bottom:30px;display:grid;
+  grid-template-columns:1fr auto 1fr;align-items:end;gap:24px;
+}
+.editorial-credit{font:400 12px/1.7 Manrope,Arial,sans-serif}
+.editorial-credit span{display:block;font-size:10px;color:#c4c2bb}
+.editorial-dock{
+  display:flex;align-items:center;gap:3px;padding:5px;border:1px solid #e6e3dc45;
+  background:#20211edb;backdrop-filter:blur(12px);border-radius:0;
+}
+.editorial-dock a{
+  display:flex;align-items:center;justify-content:center;min-height:44px;
+  padding:0 20px;font:400 11px/1 Manrope,Arial,sans-serif;
+  color:#eeeae2;transition:background .2s,color .2s;
+}
+.editorial-dock a:hover{background:#ffffff14}
+.editorial-dock .editorial-book{background:#eae7df;color:#20211e;gap:25px}
+.editorial-dock .editorial-book:hover{background:#fff}
+.editorial-book span{font-size:19px}
+.editorial-scroll{justify-self:end;font:400 10px/1.5 Manrope,Arial,sans-serif;color:#dedbd3}
+.editorial-scroll span{margin-left:26px;font-size:20px}
+body.on-hero .site-header{
+  height:88px;background:transparent!important;border-color:transparent!important;
+  box-shadow:none!important;backdrop-filter:none!important;color:#ece9e1;
+}
+body.on-hero .site-header .brand-mark,
+body.on-hero .site-header .brand-text small,
+body.on-hero .site-header .header-discuss{display:none!important}
+body.on-hero .site-header .brand-text{
+  color:#ece9e1!important;font:400 19px/1 var(--serif);letter-spacing:.17em;
+}
+body.on-hero .site-header .header-phone{
+  color:#ece9e1!important;font:400 12px/1.5 Manrope,Arial,sans-serif!important;
+}
+@media(min-width:1101px){
+  body.on-hero .site-header nav{visibility:hidden;pointer-events:none}
+  body.on-hero .site-header .header-actions{margin-left:auto}
+}
+@media(max-width:1100px){
+  .editorial-title{top:36%}
+  .editorial-footer{grid-template-columns:1fr auto;gap:28px}
+  .editorial-dock{grid-column:1/-1;grid-row:2;justify-self:center}
+  .editorial-scroll{grid-column:2;grid-row:1}
+  body.on-hero .site-header{height:74px}
+}
+@media(max-width:700px){
+  .hero.hero-editorial{height:100svh;min-height:620px;max-height:1000px}
+  .editorial-photo{object-position:67% center}
+  .hero-editorial:after{background:linear-gradient(180deg,#0005,transparent 20% 65%,#000b)}
+  .editorial-title{left:3%;right:3%;top:30%}
+  .editorial-title p{margin:0 0 23px 3px;font-size:8px;letter-spacing:.16em}
+  .hero-editorial h1{font-size:22vw;line-height:.85;letter-spacing:-.064em}
+  .editorial-footer{left:20px;right:20px;bottom:max(22px,env(safe-area-inset-bottom));gap:24px}
+  .editorial-credit{font-size:11px}
+  .editorial-credit span{font-size:9px}
+  .editorial-dock{width:100%;gap:0;padding:4px;display:grid;grid-template-columns:.8fr .8fr .8fr 1.3fr}
+  .editorial-dock a{padding:0 8px;min-height:48px;font-size:11px}
+  .editorial-dock .editorial-book{gap:12px}
+  .editorial-scroll{font-size:9px}
+  .editorial-scroll span{margin-left:10px}
+  body.on-hero .site-header .brand-text{font-size:16px;letter-spacing:.12em}
+  body.on-hero .site-header .header-phone{font-size:11px!important}
+  body.on-hero .site-header .menu-toggle{color:#ece9e1}
+}
+@media(prefers-reduced-motion:reduce){.editorial-dock a{transition:none}}
