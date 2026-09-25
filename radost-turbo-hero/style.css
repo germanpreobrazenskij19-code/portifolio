@@ -4634,10 +4634,20 @@ h1{font-size:8.3vw;line-height:.83;letter-spacing:-.048em;font-weight:500}
 }
 
 @media(min-width:1101px){
-  /* Master photograph fills the Kodak area without black bars. */
+  /* Match the complete mobile Kodak frame without cropping its printed edges. */
+  .artist-contact-sheet{
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:1374/1145;
+    align-self:center;
+    padding:0;
+  }
   .artist-contact-sheet-image{
-    object-fit:cover!important;
-    object-position:center 48%!important;
+    width:100%!important;
+    height:100%;
+    object-fit:contain!important;
+    object-position:center!important;
   }
   .artist-profile-facts{min-height:68px}
   .artist-profile-facts strong{font-size:38px}
