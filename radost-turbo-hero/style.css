@@ -2868,7 +2868,8 @@ h1{font-size:8.3vw;line-height:.83;letter-spacing:-.048em;font-weight:500}
 .price-panel:hover .price-panel-shade,
 .price-panel:focus-visible .price-panel-shade{
   background:linear-gradient(180deg,#6b451fcf 0%,#24170bef 48%,#070805fc 100%);
-  backdrop-filter:blur(2px);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
 }
 .price-panel-detail{
   padding-block:34px 30px;
@@ -4609,11 +4610,11 @@ h1{font-size:8.3vw;line-height:.83;letter-spacing:-.048em;font-weight:500}
 /* Web/mobile separation and final visual corrections — 25 Sep 2026, 17:53. */
 .service-arm-mobile{display:none}
 
-/* Cooler and lighter interaction tint on every service card. */
+/* Sharp service photographs with a 20% darker interaction tint. */
 .price-panel:hover>img,
 .price-panel:focus-visible>img,
 .price-panel.is-active>img{
-  filter:grayscale(.86) sepia(.18) saturate(.58) brightness(.61) contrast(1.08)!important;
+  filter:grayscale(.86) sepia(.18) saturate(.58) brightness(.488) contrast(1.08)!important;
 }
 .price-panel.is-active .price-panel-shade,
 .price-panel:hover .price-panel-shade,
