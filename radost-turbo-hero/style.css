@@ -4677,17 +4677,20 @@ h1{font-size:8.3vw;line-height:.83;letter-spacing:-.048em;font-weight:500}
   .service-arm-web{display:none!important}
   .service-arm-mobile{display:block!important}
 
-  /* Mobile FAQ photograph: a light, even grade without side vignetting. */
+  /* Keep the mobile haze aligned with the photograph and heading, not the FAQ height. */
   .faq-v2:before{
-    filter:grayscale(1) brightness(.68) contrast(1.1)!important;
+    filter:grayscale(1) brightness(.62) contrast(1.1)!important;
     opacity:.84!important;
   }
   .faq-v2:after{
-    background:linear-gradient(0deg,
-      rgba(7,8,6,.88) 0%,
-      rgba(7,8,6,.72) 30%,
-      rgba(7,8,6,.46) 56%,
-      rgba(7,8,6,.30) 100%)!important;
+    inset:0 0 auto;
+    height:430px;
+    background:linear-gradient(180deg,
+      rgba(7,8,6,.30) 0px,
+      rgba(7,8,6,.30) 170px,
+      rgba(7,8,6,.48) 265px,
+      rgba(7,8,6,.76) 335px,
+      rgba(7,8,6,.94) 430px)!important;
   }
 
   /* Full-bleed hero photograph: no exposed black margins. */
