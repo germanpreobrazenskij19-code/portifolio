@@ -1,0 +1,21 @@
+(() => {
+ const works=portfolioWorks,grid=document.querySelector('#collection-grid'),dialog=document.querySelector('.portfolio-lightbox');
+ const labels={all:'ВСЕ РАБОТЫ',tattoo:'ТАТУИРОВКИ',piercing:'ПИРСИНГ',permanent:'ПЕРМАНЕНТНЫЙ МАКИЯЖ'};
+ const allowed=Object.keys(labels);let category='all',current=0,lightboxItems=[];
+ const fromURL=()=>{const p=new URL(location.href).searchParams;category=allowed.includes(p.get('category'))?p.get('category'):'all'};
+ const ids=()=>works.flatMap((w,i)=>category==='all'||w.category===category?[i]:[]);
+ const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const markup=(id,number)=>{const w=works[id];return `<article class="portfolio-card"><button class="portfolio-photo" type="button" data-photo="${id}" aria-label="Открыть: ${esc(w.title)}"><img src="${w.src}" alt="${esc(w.title)}" style="object-position:${w.position||'center'};transform:${w.transform||'none'}" ${number<4?'loading="eager"':'loading="lazy"'} decoding="async"></button></article>`};
+ const render=()=>{const items=ids();grid.innerHTML=items.map(markup).join('');document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===category)));document.querySelector('#collection-title').textContent=labels[category];document.querySelector('#collection-count').textContent=`${String(items.length).padStart(2,'0')} / В КОЛЛЕКЦИИ`};
+ const setCategory=value=>{category=allowed.includes(value)?value:'all';const url=new URL(location.href);category==='all'?url.searchParams.delete('category'):url.searchParams.set('category',category);history.pushState(null,'',url);render()};
+ document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>setCategory(b.dataset.filter)));
+ const showPhoto=id=>{current=id;const w=works[id],photo=document.querySelector('#portfolio-photo');photo.src=w.src;photo.alt=w.title;photo.style.objectPosition=w.position||'center';photo.style.transform=w.transform||'none';document.querySelector('#lightbox-title').textContent=w.title;document.querySelector('#lightbox-category').textContent='DARYA / '+labels[w.category];document.querySelector('#lightbox-count').textContent=`${String(lightboxItems.indexOf(id)+1).padStart(2,'0')} / ${String(lightboxItems.length).padStart(2,'0')}`;const b=dialog.querySelector('[data-booking]');b.dataset.product=w.title;b.dataset.service=w.category==='piercing'?'Пирсинг':w.category==='permanent'?'Перманентный макияж':'Татуировка';if(!dialog.open)dialog.showModal()};
+ document.addEventListener('click',e=>{const b=e.target.closest('[data-photo]');if(!b)return;lightboxItems=ids();showPhoto(Number(b.dataset.photo))});
+ const next=delta=>showPhoto(lightboxItems[(lightboxItems.indexOf(current)+delta+lightboxItems.length)%lightboxItems.length]);
+ dialog.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>next(Number(b.dataset.next))));
+ dialog.querySelector('.lightbox-close').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();next(e.key==='ArrowRight'?1:-1)}});
+ dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+ const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');const closeMenu=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')};menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+ window.addEventListener('popstate',()=>{fromURL();render()});fromURL();render();
+})();

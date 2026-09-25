@@ -1,0 +1,231 @@
+/* Responsive layout shared by the homepage and catalog. */
+:root{--gutter:max(clamp(20px,4.28vw,80px),calc((100vw - 1720px)/2));--header-height:88px}
+html{scroll-padding-top:calc(var(--header-height) + 12px)}
+img,video{max-width:100%}
+.header,.catalog-header{height:var(--header-height);padding:12px var(--gutter);gap:clamp(16px,2vw,32px)}
+.header-logo,.catalog-header .header-logo{flex:0 0 116px;width:116px}
+.header-logo img{width:100%;height:48px}
+.header nav,.catalog-header nav{gap:clamp(18px,2vw,32px)}
+.header nav a,.catalog-header nav a{font-size:14px;line-height:1.5;padding:10px 0}
+.header-cta{width:auto;height:46px;min-height:46px;padding:0 24px;font-size:14px;white-space:nowrap}
+.hero--video{height:clamp(620px,56.25vw,960px);max-height:none;aspect-ratio:auto}
+.hero--video .hero-copy{top:49%;bottom:auto;left:45.25%;width:29%;transform:translateY(-50%)}
+.hero-copy h1{font-size:clamp(60px,6.1vw,110px);line-height:1.02}
+.hero-description{font-size:clamp(11px,.94vw,14px);line-height:1.8;letter-spacing:.17em;white-space:normal}
+.red-rule{width:clamp(48px,5.75vw,84px);margin:clamp(20px,1.94vw,30px) 0}
+.hero-cta{width:fit-content;max-width:100%;height:auto;min-height:48px;padding:14px 28px;margin-top:clamp(22px,2.45vw,36px);font-size:15px;gap:24px}
+.hero-note-left,.hero-note-right{font-size:clamp(10px,.86vw,13px)}
+.hero-note-right{left:auto;right:var(--gutter)}
+.hero-motion-toggle{min-width:44px;min-height:44px}
+.arrow{width:32px}
+.works-heading{height:auto;min-height:108px;padding:26px var(--gutter);gap:24px;flex-wrap:wrap}
+.works-heading h2{font-size:clamp(20px,1.7vw,30px);white-space:normal;letter-spacing:.17em}
+.heading-rule{min-width:32px;margin-right:0}
+.all-works{font-size:11px;min-height:44px;gap:20px}
+.work-filters{gap:24px;flex-wrap:wrap;padding-bottom:18px}
+.work-filters button{min-height:44px;font-size:13px}
+.work-card{height:clamp(300px,32vw,560px);aspect-ratio:auto}
+.work-strip.expanded .work-card{height:auto;aspect-ratio:3/4}
+.work-strip.is-piercing .work-card{height:auto;max-height:520px}
+.works-footer{height:auto;min-height:150px;padding:28px var(--gutter)}
+.works-footer .micro{font-size:11px;line-height:1.7}
+.works-footer .thin-rule{margin-bottom:18px}
+.gallery-controls{gap:24px;padding-top:10px}
+.gallery-controls button{width:44px;min-height:44px}
+.section-wrap{padding:clamp(48px,6vw,88px) var(--gutter)}
+.studio-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,100px)}
+.studio-copy>p:not(.section-kicker){font-size:16px;line-height:1.75;max-width:550px}
+.section-wrap h2{font-size:clamp(36px,5.2vw,78px)}
+.text-link{font-size:12px;min-height:44px}
+#services{padding:30px var(--gutter);--service-photo-height:clamp(190px,calc(100svh - 470px),320px)}
+.services-editorial-heading{width:60%;height:auto;min-height:112px;padding-top:12px}
+.services-editorial h2{font-size:clamp(30px,2.8vw,44px)}
+.services-editorial-intro{font-size:11px;line-height:1.65;letter-spacing:.16em}
+.services-editorial-grid{gap:24px;margin-top:18px}
+.service-poster h3{font-size:clamp(25px,2.8vw,40px)}
+.service-poster-description{font-size:12px;line-height:1.5;min-height:36px}
+.service-poster-link{min-height:44px;font-size:11px;letter-spacing:.09em;min-width:0;max-width:100%}
+.service-poster-number{font-size:11px}
+.services-editorial-footer{font-size:10px;line-height:1.6;letter-spacing:.1em;flex-wrap:wrap;margin-top:22px}
+.services-editorial-footer a{min-height:44px;display:inline-flex;align-items:center}
+.contact-heading{gap:32px}
+.contact-heading .cta{font-size:14px;min-height:48px}
+.contact-details{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.contact-details p,.contact-details address,.contact-phone{font-size:16px}
+.contact-details a:not(.contact-phone),.contact-details small{font-size:13px}
+.contact-details a{overflow-wrap:anywhere}
+.site-footer{padding:42px var(--gutter) 24px}
+.site-footer>div{flex-wrap:wrap;row-gap:12px;font-size:12px}
+.site-footer>div a,.site-footer>div button{min-height:44px;display:inline-flex;align-items:center}
+.booking-dialog,.info-dialog,.product-dialog{max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
+.close,.photo-bottom button{min-width:44px;min-height:44px}
+.booking-direct{flex-wrap:wrap;font-size:14px;gap:12px}
+input,textarea,select{font-size:16px}
+.photo-dialog{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+.photo-dialog #large-photo{height:min(66dvh,670px)}
+.dialog-top{gap:12px;padding:12px 16px}
+.dialog-top h2{font-size:18px;min-width:0}
+.photo-bottom{padding:8px 16px}
+.catalog-body,.catalog-help{padding-left:var(--gutter);padding-right:var(--gutter)}
+.catalog-hero{padding-left:var(--gutter);padding-right:var(--gutter)}
+.catalog-search-row{grid-template-columns:minmax(0,1fr) minmax(200px,260px)}
+.catalog-search-row input,.catalog-search-row select{font-size:16px;min-width:0}
+.catalog-card{grid-template-columns:100px minmax(0,1fr) 140px 125px;gap:24px}
+.catalog-count-row{gap:16px;flex-wrap:wrap;line-height:1.5}
+.catalog-count-row button{min-height:44px}
+.catalog-filters button{min-height:44px}
+
+@media(max-width:1099px){
+ :root{--header-height:76px;--gutter:clamp(20px,4vw,44px)}
+ .header,.catalog-header{background:var(--paper);box-shadow:0 1px 0 #b6b1a6;padding:12px var(--gutter);gap:16px}
+ .header .menu-toggle,.catalog-header .menu-toggle{display:flex;align-items:center;justify-content:center;gap:10px;min-width:44px;min-height:44px;height:44px;padding:0 14px;order:2;font-size:14px;background:var(--paper);border:1px solid #b6b1a6;margin:0}
+ .header nav,.catalog-header nav{display:none;position:absolute;top:100%;left:auto;right:var(--gutter);width:min(320px,calc(100vw - 2 * var(--gutter)));max-height:calc(100dvh - var(--header-height) - 16px);overflow-y:auto;padding:12px 22px;background:var(--paper);border:1px solid #b6b1a6;box-shadow:0 14px 25px #0002}
+ .header nav.open,.catalog-header nav.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+ .header nav a,.catalog-header nav a{font-size:16px;padding:12px 0;min-height:44px;text-align:left}
+ .header-cta{margin-left:auto;padding:0 20px;font-size:14px}
+ .catalog-header .header-logo{margin-right:auto}
+ .hero--video{display:flex;flex-direction:column;height:auto;min-height:0;max-height:none;padding-top:var(--header-height);overflow:hidden}
+ .hero--video .hero-art{position:relative;inset:auto;flex:none;width:100%;height:auto;aspect-ratio:16/9;background-size:cover}
+ .hero--video #hero-video{width:100%;height:100%;object-fit:contain}
+ .hero--video .hero-copy{position:relative;inset:auto;transform:none;width:100%;padding:32px var(--gutter) 40px;background:var(--paper);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 32px;align-items:center}
+ .hero-copy h1{font-size:clamp(56px,8vw,80px);width:100%;transform:none;grid-column:1;grid-row:1/3}
+ .hero-copy .red-rule{display:none}
+ .hero-description{grid-column:2;grid-row:1;font-size:12px;white-space:normal}
+ .hero-cta{grid-column:2;grid-row:2;margin:0;justify-self:start;font-size:15px;padding:14px 24px}
+ .hero-note-left,.hero-note-right{display:none}
+ .hero-motion-toggle{top:calc(var(--header-height) + 12px);right:var(--gutter);left:auto;bottom:auto}
+ .work-strip{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#777 #171714}
+ .work-card{width:32%;flex-basis:32%;height:auto;aspect-ratio:3/4;scroll-snap-align:start}
+ .work-strip.expanded{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .work-strip.is-piercing .work-card{width:calc(50% - 6px);flex-basis:calc(50% - 6px)}
+ #services{--service-photo-height:clamp(210px,34vw,320px)}
+ .services-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}
+ .service-poster h3{font-size:clamp(28px,4.6vw,40px)}
+ .services-editorial-heading{width:70%;min-height:108px}
+ .services-editorial-intro{max-width:none}
+ .services-editorial-aside{display:none}
+ .contact-heading{align-items:flex-start;flex-direction:column}
+ .contact-heading .cta{margin-top:0}
+ .catalog-header .catalog-call{display:none}
+ .catalog-card{grid-template-columns:80px minmax(0,1fr) 110px 100px;gap:18px;padding:22px 0}
+ .catalog-card h2{font-size:23px}
+ .catalog-card .item-price{font-size:24px}
+}
+@media(max-width:767px){
+ .studio-section{grid-template-columns:minmax(0,1fr);gap:32px}
+ .studio-photo--video{max-width:280px}
+ .studio-copy>p:not(.section-kicker){font-size:15px}
+ .work-card{width:min(74vw,340px);flex-basis:min(74vw,340px)}
+ .work-strip.expanded{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .works-heading{min-height:100px;padding-top:24px;padding-bottom:12px;gap:12px}
+ .works-heading h2{font-size:20px}
+ .all-works{font-size:11px}
+ .heading-rule{min-width:20px}
+ .contact-details{grid-template-columns:minmax(0,1fr);gap:28px}
+ #services{--service-photo-height:clamp(160px,47vw,280px);padding-top:28px;padding-bottom:24px}
+ .services-editorial::before{width:100%;background-size:auto 500px;background-position:65% top;mask-image:linear-gradient(#000,transparent 500px)}
+ .services-editorial h2{font-size:32px;transform:none;width:auto}
+ .services-editorial-heading{width:100%;min-height:104px}
+ .services-editorial-grid{gap:24px 16px;margin-top:16px}
+ .service-poster h3{font-size:clamp(24px,5.3vw,38px)}
+ .services-editorial-intro{font-size:11px;max-width:78%}
+ .service-poster-description{font-size:12px;min-height:36px}
+ .service-poster-link{font-size:10px;letter-spacing:.03em;gap:8px;width:100%}
+ .services-editorial-footer>span{width:100%}
+ .services-editorial-footer a{margin-left:0}
+ .catalog-hero{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:32px;padding-bottom:24px;min-height:0}
+ .catalog-intro h1{font-size:clamp(40px,8vw,60px);white-space:normal}
+ .catalog-art-space{height:190px}
+ .catalog-hero::before{background-size:auto 330px;background-position:80% bottom}
+ .catalog-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#eee7d8 25%,#eee7d8ee 48%,transparent 75%)}
+ .catalog-description{font-size:12px;letter-spacing:.08em}
+ .catalog-intro .catalog-description{background:none;box-shadow:none}
+ .catalog-card{grid-template-columns:minmax(0,1fr) auto;gap:12px 16px;padding:20px 0}
+ .card-top{grid-column:1/-1;flex-direction:row;justify-content:space-between;font-size:10px}
+ .catalog-card h2{grid-column:1;grid-row:2;font-size:23px}
+ .catalog-card .item-price{grid-column:2;grid-row:2;font-size:24px;text-align:right}
+ .catalog-card .item-details{grid-column:1/-1;min-height:44px;width:auto;justify-self:end;padding:6px 0;font-size:11px;gap:20px}
+ .catalog-help{display:block;padding-top:44px;padding-bottom:44px}
+ .catalog-help>div:last-child{margin-top:28px;align-items:flex-start}
+}
+@media(max-width:599px){
+ :root{--header-height:72px}
+ .header,.catalog-header{gap:10px}
+ .header-logo,.catalog-header .header-logo{flex-basis:90px;width:90px}
+ .header-logo img{height:42px}
+ .header .menu-toggle,.catalog-header .menu-toggle{width:44px;padding:0;flex:0 0 44px}
+ .menu-label{display:none}
+ .header-cta{font-size:12px;padding:0 12px;min-width:0;height:44px;min-height:44px}
+ .hero--video .hero-copy{display:block;padding:26px var(--gutter) 32px}
+ .hero-copy h1{font-size:clamp(48px,12.5vw,70px);line-height:1.05;transform:none;width:auto}
+ .hero-copy .red-rule{display:block;width:48px;margin:20px 0}
+ .hero-description{font-size:12px;letter-spacing:.13em;line-height:1.7}
+ .hero-cta{margin-top:22px;width:100%;font-size:15px;min-height:48px}
+ .works-heading h2{flex-basis:100%;letter-spacing:.12em}
+ .heading-rule{display:none}
+ .work-filters{gap:22px}
+ .work-filters button{font-size:12px}
+ .works-footer{min-height:135px}
+ .section-wrap h2{font-size:clamp(32px,8.5vw,48px)}
+ .contact-heading h2{font-size:clamp(30px,7.8vw,44px)}
+ .contact-heading .cta{width:100%}
+ .footer-wordmark{font-size:clamp(38px,10vw,58px)}
+ .site-footer>div{gap:8px 20px}
+ .catalog-search-row{grid-template-columns:minmax(0,1fr);gap:18px}
+ .catalog-filters{gap:10px 18px}
+ .catalog-filters button{font-size:17px}
+ .catalog-filters span{font-size:11px}
+ .booking-dialog,.info-dialog,.product-dialog{padding:48px 20px 24px}
+ .booking-dialog h2,.info-dialog h2,.product-dialog h2{font-size:32px}
+ .eyebrow{font-size:10px;line-height:1.5;letter-spacing:.14em}
+ .booking-direct{font-size:13px}
+}
+@media(max-height:500px) and (min-width:600px){
+ .photo-dialog #large-photo{height:calc(100dvh - 160px)}
+}
+
+/* Full-section studio film, with a quiet area for the copy. */
+.studio-section--cinema{position:relative;isolation:isolate;display:flex;justify-content:flex-end;align-items:center;min-height:clamp(620px,51vw,820px);padding:90px var(--gutter) 112px;background:#10151b;color:#f3f3ef;overflow:hidden}
+.studio-section--cinema .studio-photo--video{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;z-index:-2}
+.studio-section--cinema .studio-video-frame{width:100%;height:100%;aspect-ratio:auto;background:#10151b}
+.studio-section--cinema #studio-video{object-position:50% 65%;filter:grayscale(1) sepia(.22) hue-rotate(170deg) saturate(.7) brightness(.65) contrast(1.12)}
+.studio-section--cinema::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(7,12,18,.08) 10%,rgba(7,12,18,.32) 43%,rgba(7,12,18,.89) 78%),linear-gradient(0deg,rgba(7,12,18,.7),transparent 30%)}
+.studio-section--cinema .studio-copy{width:min(46%,560px);position:relative;text-shadow:0 2px 16px #0004}
+.studio-section--cinema .section-kicker{color:#c3cbd2}
+.studio-section--cinema .studio-copy>p:not(.section-kicker){color:#d3d8dd;max-width:500px}
+.studio-section--cinema .text-link{color:#fff}
+.studio-section--cinema .studio-film-caption{position:absolute;left:var(--gutter);bottom:26px;max-width:calc(100% - 220px);border:0;padding:0;color:#c3cbd2;font-size:10px;letter-spacing:.14em;pointer-events:auto}
+.studio-motion-toggle{position:absolute;right:var(--gutter);bottom:26px;display:flex;align-items:center;gap:20px;min-height:44px;padding:10px 16px;color:#f3f3ef;border:1px solid #ffffff60;background:#0b121b66;font:12px var(--sans);cursor:pointer}
+.studio-motion-toggle:hover,.studio-motion-toggle:focus-visible{background:#ffffff20;border-color:#fff}
+@media(max-width:1099px){.studio-section--cinema{min-height:660px}.studio-section--cinema .studio-copy{width:52%}.studio-section--cinema h2{font-size:clamp(36px,5.3vw,58px)}}
+@media(max-width:767px){.studio-section--cinema{min-height:760px;align-items:flex-end;padding:250px var(--gutter) 106px}.studio-section--cinema .studio-copy{width:100%;max-width:540px}.studio-section--cinema #studio-video{object-position:50% 50%}.studio-section--cinema::after{background:linear-gradient(180deg,rgba(7,12,18,.08),rgba(7,12,18,.25) 24%,rgba(7,12,18,.88) 53%,rgba(7,12,18,.96))}.studio-section--cinema .studio-copy>p:not(.section-kicker){font-size:14px;line-height:1.7;margin:20px 0}.studio-section--cinema .section-kicker{margin-bottom:20px}.studio-section--cinema .studio-film-caption{max-width:calc(100% - 170px);font-size:8px;letter-spacing:.06em;gap:6px}.studio-motion-toggle{font-size:11px;padding:10px 12px;gap:12px}}
+
+.studio-film-caption{display:flex;align-items:center;gap:12px;font-family:var(--micro);line-height:1.5;z-index:1}.studio-film-caption a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;font-size:20px}
+
+/* Give the portrait footage more room inside the wide studio section. */
+@media(min-width:768px){.studio-section--cinema .studio-photo--video{width:78%;left:0;right:auto;justify-self:start;mask-image:linear-gradient(90deg,#000 0%,#000 76%,transparent 100%)}.studio-section--cinema #studio-video{object-position:50% 62%}}
+
+/* Brand accent over the studio film. */
+.studio-section--cinema #studio-title::after{content:"";display:block;width:88px;height:4px;background:#d93b29;margin-top:24px;box-shadow:0 0 22px #c3302225}
+.studio-section--cinema .section-kicker{color:#e77767}
+
+/* Three coordinated portrait edits, composed as one cinematic section. */
+.studio-section--triptych{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr;gap:0;place-items:center;min-height:0;height:clamp(640px,64vw,1040px);margin:0;padding:18px;background:#0c0f12;overflow:hidden;color:#f1f1ee}
+.studio-montage{position:absolute;inset:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;z-index:-2;background:#10141a}
+.studio-cut{width:100%;height:100%;min-width:0;object-fit:cover;filter:grayscale(1) sepia(.22) hue-rotate(170deg) saturate(.7) brightness(.65) contrast(1.12)}
+.studio-section--triptych::after{content:"";position:absolute;inset:18px;z-index:-1;pointer-events:none;background:linear-gradient(0deg,#070c1299,transparent 35%,#070c1215 80%),radial-gradient(ellipse at center,#070c1233,transparent 70%)}
+.studio-montage-title{text-align:center;pointer-events:none;padding:35px 20px;text-shadow:0 2px 26px #0007}
+.studio-montage-title .section-kicker{color:#f0e9e4;font-size:10px;letter-spacing:.3em;margin:0 0 23px}
+.studio-section--triptych #studio-title{font:500 clamp(60px,7.7vw,122px)/1.03 var(--display);letter-spacing:-.025em;margin:0}
+.studio-section--triptych #studio-title span{display:inline-block;border-bottom:4px solid #cc3828;padding-bottom:15px}
+.studio-section--triptych .studio-film-caption{position:absolute;left:max(36px,var(--gutter));bottom:25px;color:#d2d8db;font-size:9px;letter-spacing:.18em}
+.studio-section--triptych .studio-motion-toggle{position:absolute;right:max(36px,var(--gutter));bottom:30px;z-index:2;background:#0a10198f}
+@media(max-width:767px){.studio-section--triptych{padding:8px}.studio-montage{inset:8px;gap:2px}.studio-section--triptych::after{inset:8px}.studio-section--triptych #studio-title{font-size:clamp(39px,9.5vw,70px)}.studio-montage-title .section-kicker{font-size:8px;letter-spacing:.2em;margin-bottom:18px}.studio-section--triptych #studio-title span{border-bottom-width:3px;padding-bottom:10px}.studio-section--triptych .studio-film-caption{left:20px;bottom:14px;font-size:7px;letter-spacing:.07em;max-width:55%}.studio-section--triptych .studio-motion-toggle{right:20px;bottom:23px;font-size:10px;padding:9px 11px}.studio-montage-title{padding:20px 8px}}
+
+.studio-cut--mobile{display:none}
+@media(max-width:767px){
+ .studio-section--triptych{height:clamp(600px,165vw,800px)}
+ .studio-montage{grid-template-columns:minmax(0,1fr);gap:0}
+ .studio-cut--desktop{display:none}
+ .studio-cut--mobile{display:block;object-position:center}
+}

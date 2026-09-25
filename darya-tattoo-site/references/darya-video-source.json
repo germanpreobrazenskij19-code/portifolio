@@ -1,0 +1,23 @@
+{
+  "business": "Darya",
+  "source": "https://yandex.ru/maps/org/darya/170132803758/",
+  "retrieved": "2026-09-24",
+  "videos": [
+    {
+      "player": "https://runtime.strm.yandex.ru/player/video/vplvy53pbl7mrornoxen",
+      "local": "assets/video/darya/studio-darya-process.mp4"
+    },
+    {
+      "player": "https://runtime.strm.yandex.ru/player/video/vplvjpfs6p5xwk7hqb2f",
+      "local": "assets/video/darya/studio-darya-stencil.mp4"
+    },
+    {
+      "player": "https://runtime.strm.yandex.ru/player/video/vplv543iqtlljjowmanp",
+      "local": "assets/video/darya/studio-darya-1.mp4"
+    },
+    {
+      "player": "https://runtime.strm.yandex.ru/player/video/vplvtefnbxe56cub6vw5",
+      "local": "assets/video/darya/studio-darya-portrait.mp4"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#19080d">
+  <title>Darya — тату, пирсинг и перманентный макияж в Санкт-Петербурге</title>
+  <meta name="description" content="Darya — студия татуировки, пирсинга и перманентного макияжа в Санкт-Петербурге. Полюстровский проспект, 59Ф, кабинет 304. Ежедневно 12:00–22:00.">
+  <link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="components.css"><link rel="stylesheet" href="responsive.css"><link rel="stylesheet" href="darya.css">
+  <link rel="preload" as="image" href="assets/darya/hero-sakura-woman-v2.webp">
+  <script src="portfolio-data.js" defer></script><script src="app.js" defer></script><script src="booking.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TattooParlor","name":"Darya","description":"Татуировки, пирсинг, перманентный макияж и обучение в Санкт-Петербурге.","telephone":"+79963545965","address":{"@type":"PostalAddress","streetAddress":"Полюстровский проспект, 59Ф, этаж 3, кабинет 304","addressLocality":"Санкт-Петербург","addressCountry":"RU"},"openingHours":["Mo-Su 12:00-22:00"],"sameAs":["https://vk.ru/daria_permanentu","https://t.me/Darya_dama_tattoo","https://yandex.ru/maps/org/darya/170132803758/"]}</script>
+</head>
+<body>
+  <a class="skip" href="#works">Перейти к работам</a>
+  <header class="header">
+    <a class="header-logo darya-logo" href="#top" aria-label="Darya — главная"><img src="assets/darya/darya-logo.png" alt="Darya Tattoo Studio"></a>
+    <button class="menu-toggle" aria-label="Меню" aria-expanded="false" aria-controls="navigation"><span class="menu-label">Меню</span><span aria-hidden="true">☰</span></button>
+    <nav id="navigation" aria-label="Основная навигация"><a href="#works">Тату</a><a href="#piercing">Пирсинг</a><a href="#studio">Студия</a><a href="#services">Услуги</a><a href="#contacts">Контакты</a></nav>
+    <button class="cta header-cta" data-booking>Записаться</button>
+  </header>
+  <main>
+    <section class="hero hero--video darya-hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><img class="hero-static-art" src="assets/darya/hero-sakura-woman-v2.webp" alt=""></div>
+      <div class="hero-copy">
+        <h1 id="hero-title"><a href="#works">ТАТУ</a><span aria-hidden="true"> · </span><a href="#piercing">ПИРСИНГ</a></h1>
+        <span class="red-rule" aria-hidden="true"></span>
+        <p class="micro hero-description">ПЕРМАНЕНТНЫЙ МАКИЯЖ<br>И ОБУЧЕНИЕ МАСТЕРОВ.</p>
+        <button class="cta hero-cta" data-booking>Обсудить идею <span class="arrow" aria-hidden="true"></span></button>
+      </div>
+    </section>
+
+    <section class="works" id="works" aria-labelledby="works-title">
+      <div class="works-heading"><h2 id="works-title">ТАТУ</h2><span class="heading-rule"></span></div>
+      <div class="work-strip" id="work-strip" aria-label="Галерея татуировок"></div>
+    </section>
+
+    <section class="piercing-showcase" id="piercing" aria-labelledby="piercing-title">
+      <div class="works-heading"><h2 id="piercing-title">ПИРСИНГ</h2><span class="heading-rule"></span></div>
+      <div class="work-strip piercing-preview-strip" id="piercing-preview" aria-label="Примеры пирсинга"></div>
+    </section>
+
+    <section class="studio-section studio-section--triptych darya-studio" id="studio" aria-labelledby="studio-title">
+      <div class="studio-montage" aria-label="Видео работ Дарьи">
+        <video id="studio-video" class="studio-cut studio-cut--desktop" src="assets/video/darya/studio-darya-process.mp4" poster="assets/video/darya/studio-darya-process.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Дарья готовит оборудование"></video>
+        <video class="studio-cut studio-cut--desktop" src="assets/video/darya/studio-darya-stencil.mp4" poster="assets/video/darya/studio-darya-stencil.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Дарья переносит эскиз"></video>
+        <video class="studio-cut studio-cut--mobile" src="assets/video/darya/studio-darya-mobile.mp4" poster="assets/video/darya/studio-darya-mobile.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Работы Дарьи"></video>
+      </div>
+      <div class="studio-montage-title"><h2 id="studio-title">ТВОЯ ИДЕЯ<br><span>НАШ ПОЧЕРК</span></h2></div>
+    </section>
+
+    <section class="services-panels" id="services" aria-labelledby="services-title">
+      <header class="services-panels-heading"><h2 id="services-title">УСЛУГИ</h2></header>
+      <div class="services-panels-grid">
+        <article class="service-panel service-panel--tattoo"><img class="service-panel-image" src="assets/darya/final/tattoo-03.webp" alt="Японская татуировка Darya"><div class="service-panel-content"><h3>ТАТУ</h3><p>От минимализма<br>до больших проектов</p><button class="service-panel-action" type="button" data-booking>ЗАПИСАТЬСЯ</button></div></article>
+        <article class="service-panel service-panel--piercing"><img class="service-panel-image" src="assets/darya/final/piercing-04-right.webp" alt="Пирсинг Darya"><div class="service-panel-content"><h3>ПИРСИНГ</h3><p>Проколы, замена<br>и подбор украшений</p><button class="service-panel-action" type="button" data-booking>ЗАПИСАТЬСЯ</button></div></article>
+        <article class="service-panel service-panel--beauty"><img class="service-panel-image" src="assets/darya/services/service-permanent-real.webp" alt="Перманентный макияж Darya"><div class="service-panel-content"><h3>ПЕРМАНЕНТ</h3><p>Брови, губы<br>и межресничка</p><button class="service-panel-action" type="button" data-booking>ЗАПИСАТЬСЯ</button></div></article>
+        <article class="service-panel service-panel--jewelry"><img class="service-panel-image" src="assets/darya/services/service-training.webp" alt="Обучение в студии Darya"><div class="service-panel-content"><h3>ОБУЧЕНИЕ</h3><p>Курсы тату-мастера<br>и пирсера</p><button class="service-panel-action" type="button" data-booking>ЗАПИСАТЬСЯ</button></div></article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="faq-japanese-mark" aria-hidden="true"><span>問</span><i></i><b>桜 · 鶴</b></div>
+      <div class="faq-intro"><h2 id="faq-title">ЧАСТЫЕ<br>ВОПРОСЫ<span>.</span></h2><p>Запись, подготовка<br>и стоимость — по делу.</p><button class="faq-ask" data-booking>Задать свой вопрос <span aria-hidden="true">⟶</span></button></div>
+      <div class="faq-list">
+        <details name="studio-faq"><summary>Как записаться?<span></span></summary><div class="faq-answer"><p>Позвони или напиши Дарье во ВКонтакте либо Telegram. Укажи услугу и удобные даты. Студия работает ежедневно с 12:00 до 22:00 по предварительной записи.</p></div></details>
+        <details name="studio-faq"><summary>Как узнать стоимость?<span></span></summary><div class="faq-answer"><p>Пришли размер, место на теле и референсы. Дарья уточнит детали и рассчитает стоимость до записи.</p></div></details>
+        <details name="studio-faq"><summary>Можно прийти со своей идеей?<span></span></summary><div class="faq-answer"><p>Да. Можно прислать рисунок, несколько референсов или просто описать настроение. Мастер поможет собрать идею в цельный эскиз.</p></div></details>
+        <details name="studio-faq"><summary>Как подготовиться к пирсингу?<span></span></summary><div class="faq-answer"><p>Выспись, поешь перед визитом и не употребляй алкоголь. После процедуры мастер объяснит уход и поможет подобрать украшение.</p></div></details>
+        <details name="studio-faq"><summary>Есть ли обучение?<span></span></summary><div class="faq-answer"><p>Да: курс тату-мастера и курс пирсинга. Программа, даты и формат обучения согласуются лично со студией.</p></div></details>
+      </div>
+    </section>
+
+    <footer class="footer-new" id="contacts" aria-labelledby="contacts-title">
+      <div class="footer-invitation"><div><h2 id="contacts-title">ДАВАЙ ОБСУДИМ<span>?</span></h2></div><button class="cta" data-booking>Записаться <span class="arrow"></span></button></div>
+      <div class="footer-columns">
+        <div class="footer-studio"><a class="footer-brand" href="#top">DARYA<span>ТАТУ / ПИРСИНГ / ПЕРМАНЕНТ</span></a><p>Точная работа<br>с вниманием к тебе.</p></div>
+        <nav aria-label="Навигация в подвале"><h3>НА САЙТЕ</h3><a href="#works">Тату</a><a href="#piercing">Пирсинг</a><a href="#services">Услуги</a><a href="#faq">Частые вопросы</a></nav>
+        <div><h3>НА СВЯЗИ</h3><a class="footer-phone" href="tel:+79963545965">+7 (996) 354-59-65</a><a href="https://vk.ru/daria_permanentu" target="_blank" rel="noopener">ВКонтакте ↗</a><a href="https://t.me/Darya_dama_tattoo" target="_blank" rel="noopener">Telegram ↗</a></div>
+        <div><h3>В СТУДИИ</h3><address>Санкт-Петербург<br>Полюстровский пр., 59Ф<br>3 этаж, кабинет 304</address><a href="https://yandex.ru/maps/org/darya/170132803758/" target="_blank" rel="noopener">Построить маршрут ↗</a><p class="footer-hours">Ежедневно, 12:00–22:00<br>По предварительной записи</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 DARYA TATTOO STUDIO</span><button class="footer-text-button" data-panel="photos">О фотографиях</button><a href="#top">Наверх ↑</a></div>
+    </footer>
+  </main>
+
+  <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-title"><div class="dialog-top"><h2 id="photo-title"></h2><button class="close" aria-label="Закрыть просмотр">×</button></div><div id="large-photo"></div><div class="photo-bottom"><button data-photo-shift="-1" aria-label="Предыдущая работа">⟵</button><span id="photo-count"></span><button data-photo-shift="1" aria-label="Следующая работа">⟶</button></div></dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><button class="close" aria-label="Закрыть">×</button><p class="eyebrow">DARYA</p><h2 id="info-title"></h2><div id="info-content"></div></dialog>
+  <dialog class="booking-dialog booking-direct-dialog" id="booking-dialog" aria-labelledby="booking-title"><button class="close" aria-label="Закрыть">×</button><h2 id="booking-title">Связаться с Дарьей.</h2><p class="booking-lead">Позвони или напиши напрямую — выбери удобный способ.</p><div class="booking-contact-list"><a href="tel:+79963545965"><small>ПОЗВОНИТЬ</small><strong>+7 (996) 354-59-65</strong><span>↗</span></a><a href="https://vk.ru/daria_permanentu" target="_blank" rel="noopener"><small>НАПИСАТЬ</small><strong>ВКонтакте</strong><span>↗</span></a><a href="https://t.me/Darya_dama_tattoo" target="_blank" rel="noopener"><small>НАПИСАТЬ</small><strong>Telegram</strong><span>↗</span></a></div><p class="booking-hours">ЕЖЕДНЕВНО · 12:00–22:00</p></dialog>
+</body></html>

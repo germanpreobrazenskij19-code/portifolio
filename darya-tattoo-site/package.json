@@ -1,0 +1,11 @@
+{
+  "name": "darya-tattoo-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4180 --bind 127.0.0.1",
+    "build": "node build.mjs",
+    "preview": "python3 -m http.server 4180 --bind 127.0.0.1 --directory dist"
+  }
+}

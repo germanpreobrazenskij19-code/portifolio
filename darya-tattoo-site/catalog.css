@@ -1,0 +1,270 @@
+.catalog-page{background:var(--paper)}.catalog-body{padding:48px 4.3vw 65px;scroll-margin-top:15px}.catalog-filters{display:flex;flex-wrap:wrap;gap:8px 26px;border-bottom:1px solid #b3b0a4}.catalog-filters button{border:0;border-bottom:3px solid transparent;background:none;padding:0 0 17px;font:400 18px var(--display)}.catalog-filters button[aria-pressed=true]{color:var(--red);border-bottom-color:var(--red)}.catalog-filters span{font:10px var(--micro);margin-left:6px;vertical-align:top;color:#858074}.catalog-search-row{display:grid;grid-template-columns:1fr 260px;gap:28px;margin-top:24px}.catalog-search-row label{margin:0}.catalog-search-row label>span{font:10px var(--micro);letter-spacing:.15em;color:#666056}.catalog-search-row input,.catalog-search-row select{height:48px;margin:9px 0 0;background:transparent;border-color:#b3b0a4;font-size:13px}.catalog-count-row{display:flex;justify-content:space-between;align-items:center;margin:22px 0;color:#70695f;font:11px var(--micro);letter-spacing:.05em}.catalog-count-row p{margin:0}.catalog-count-row button{font:inherit;letter-spacing:inherit;background:none;border:0;color:var(--red)}.catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #b3b0a4;border-left:1px solid #b3b0a4}.catalog-card{min-width:0;padding:17px;display:flex;flex-direction:column;border-right:1px solid #b3b0a4;border-bottom:1px solid #b3b0a4;min-height:195px;transition:background .2s}.catalog-card:hover{background:#e9e6dd}.card-top{display:flex;justify-content:space-between;gap:15px;font:9px var(--micro);letter-spacing:.16em;text-transform:uppercase;color:#827568}.catalog-card h2{font:400 22px/1.2 var(--display);letter-spacing:-.01em;margin:14px 0;max-width:100%;overflow-wrap:anywhere}.item-price{font:400 24px var(--display);margin:auto 0 14px}.item-price small{font:11px var(--sans);color:#777164}.item-details{display:flex;align-items:center;justify-content:space-between;width:100%;padding:11px 0 0;border:0;border-top:1px solid #c7c2b6;background:none;text-transform:uppercase;font:10px var(--micro);letter-spacing:.12em}.item-details:hover{color:var(--red)}.item-details .arrow{width:30px}.catalog-notice{font-size:11px;line-height:1.7;color:#776f64;max-width:730px;margin:28px 0 0}.catalog-empty{padding:70px 20px;text-align:center;border-top:1px solid #b3b0a4}.catalog-empty h2{font:400 34px var(--display)}.catalog-empty p{font-size:13px;margin:20px 0}.catalog-empty .cta{padding:12px 24px;font-size:13px}.catalog-help{display:flex;justify-content:space-between;align-items:center;gap:35px;padding:65px 4.3vw;background:var(--red);color:var(--paper)}.catalog-help .section-kicker{color:#eab7ac}.catalog-help h2{font:500 clamp(36px,5vw,70px)/1 var(--display)}.catalog-help p:not(.section-kicker){font-size:13px;line-height:1.7;margin:25px 0 0}.catalog-help>div:last-child{display:flex;flex-direction:column;gap:20px;align-items:center}.catalog-help .cta{background:var(--paper);color:var(--ink);border-color:var(--paper);padding:16px 22px;font-size:13px}.catalog-help a{font-size:14px}.catalog-page .site-footer{background:var(--ink)}.product-dialog{width:min(530px,92vw);padding:45px;background:var(--paper);color:var(--ink)}.product-dialog>.close{position:absolute;right:12px;top:12px}.product-dialog h2{font:400 40px/1.15 var(--display);margin:25px 0}.product-dialog .item-price{color:var(--red);font-size:34px;margin:0 0 25px}.product-dialog p:not(.section-kicker):not(.item-price){font-size:13px;line-height:1.7}.product-availability{color:#756d61}.product-dialog .cta{padding:14px 20px;width:100%;font-size:13px;margin-top:15px}.product-phone{display:block;font-size:14px;text-align:center;margin-top:22px}
+@media(max-width:1100px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-card h2{font-size:21px}}
+@media(max-width:620px){.catalog-body{padding:32px 6vw 40px}.catalog-filters{gap:14px 18px}.catalog-filters button{font-size:17px;padding-bottom:10px}.catalog-search-row{grid-template-columns:1fr;gap:18px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-card{min-height:190px;padding:13px}.catalog-card h2{max-width:100%;font-size:19px;margin:12px 0}.catalog-card .item-price{font-size:22px;margin-bottom:12px}.card-top{font-size:8px;letter-spacing:.06em;gap:5px}.item-details{font-size:9px;letter-spacing:.04em}.item-details .arrow{width:20px}.catalog-help{display:block;padding:44px 6vw}.catalog-help>div:last-child{margin-top:30px;align-items:flex-start}.catalog-help h2{font-size:39px}.product-dialog{padding:42px 24px 28px}.product-dialog h2{font-size:33px}.catalog-empty{padding:45px 0}.catalog-empty h2{font-size:28px}}
+
+@media(min-width:621px) and (max-width:800px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* A compact, independent catalog hero. Shared palette and typography only. */
+.catalog-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:23px 4.3vw;border-bottom:1px solid #b6b1a6;background:var(--paper);color:var(--ink)}.catalog-header .menu-toggle{display:none}.catalog-brand{font:500 25px/1 var(--display);letter-spacing:-.02em;white-space:nowrap}.catalog-header nav{display:flex;gap:30px;font-size:12px}.catalog-header a:hover,.catalog-header a[aria-current=page]{color:var(--red)}.catalog-call{font-size:12px;white-space:nowrap}.catalog-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:7%;min-height:460px;padding:46px 10vw 44px 4.3vw;background:var(--paper);color:var(--ink);border-bottom:1px solid #b6b1a6;overflow:hidden}.catalog-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:url("assets/catalog-dragon.png") center/cover no-repeat}.catalog-intro{position:relative;z-index:1}.catalog-art-space{height:356px;pointer-events:none}.catalog-intro .section-kicker{font-size:10px;margin:0 0 23px;color:var(--red)}.catalog-intro h1{font:500 clamp(54px,6.1vw,88px)/1 var(--display);letter-spacing:-.035em;margin:0;transform:none;width:auto;white-space:nowrap}.catalog-red-rule{display:block;width:58px;height:3px;background:var(--red);margin:23px 0}.catalog-description{font:400 10px/1.85 var(--micro);letter-spacing:.15em;margin:0 0 25px}.catalog-hero-cta{padding:13px 25px;min-height:46px;font-size:13px;gap:28px}.catalog-hero-cta .arrow{width:29px}.catalog-visual{position:relative;isolation:isolate;margin:0;justify-self:end;width:100%;max-width:350px}.catalog-visual>img{display:block;width:100%;height:325px;object-fit:cover;object-position:center 45%}.catalog-visual::after{content:"";position:absolute;z-index:-1;width:120%;height:55px;left:-10%;bottom:13px;background:url('assets/catalog-brush.svg') center/100% 100% no-repeat;transform:rotate(-5deg)}.catalog-visual figcaption{font:9px var(--micro);letter-spacing:.17em;margin-top:21px;color:#615a4e}.catalog-photo-index{position:absolute;top:-13px;left:-18px;z-index:1;background:var(--red);color:var(--paper);font:400 23px var(--display);padding:12px 10px;border-bottom:3px solid var(--ink)}.catalog-margin-note{position:absolute;left:calc(100% + 24px);top:40px;writing-mode:vertical-rl;font:10px var(--micro);letter-spacing:.23em;color:#60584d}
+@media(max-width:1000px){.catalog-header nav{gap:20px}.catalog-call{display:none}.catalog-hero{min-height:400px;padding:38px 8vw 38px 4.3vw;gap:6%}.catalog-intro h1{font-size:clamp(45px,6.2vw,62px)}.catalog-visual>img{height:285px}.catalog-description{font-size:9px;letter-spacing:.1em}.catalog-margin-note{left:calc(100% + 14px)}}
+@media(max-width:620px){.catalog-header{padding:16px 6vw;gap:16px}.catalog-header .menu-toggle{display:flex;margin-left:auto;order:0;height:35px;min-height:35px;font-size:11px}.catalog-header nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:16px 6vw;border-bottom:1px solid #b6b1a6;gap:20px;font-size:12px}.catalog-header nav.open{display:flex;justify-content:space-between}.catalog-brand{font-size:24px}.catalog-hero{grid-template-columns:1fr;min-height:0;padding:32px 6vw 29px;gap:31px}.catalog-intro .section-kicker{font-size:9px;margin-bottom:18px}.catalog-intro h1{font-size:clamp(39px,10.8vw,66px);line-height:1.04}.catalog-red-rule{width:45px;margin:18px 0}.catalog-description{font-size:9px;line-height:1.75;letter-spacing:.1em;margin-bottom:20px}.catalog-hero-cta{font-size:12px;min-height:42px;padding:11px 21px}.catalog-visual{max-width:none;width:calc(100% - 20px);justify-self:start;margin-left:8px}.catalog-visual>img{height:180px;object-position:center 43%}.catalog-photo-index{font-size:18px;padding:8px;left:-8px;top:-8px}.catalog-visual figcaption{font-size:8px;margin-top:17px;letter-spacing:.12em}.catalog-visual::after{height:32px;left:-4%;width:108%;bottom:12px}.catalog-margin-note{font-size:8px;left:calc(100% + 12px);top:17px}}
+
+/* Full-bleed tattoo illustration, preserving the compact catalog dimensions. */
+.catalog-hero{background:#ede6d6}.catalog-intro .catalog-description{display:table;background:#eee8d9e8;box-shadow:0 0 14px 8px #eee8d9b3}.catalog-hero-cta{position:relative}
+@media(max-width:1000px){.catalog-art-space{height:315px}}
+@media(max-width:620px){.catalog-art-space{height:207px}.catalog-hero::before{background-size:auto 300px;background-position:80% bottom}.catalog-hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,#eee7d8 0%,#eee7d8 48%,#eee7d800 67%)}.catalog-intro .catalog-description{background:none;box-shadow:none}}
+
+.catalog-header{padding-top:10px;padding-bottom:10px}.catalog-header .header-logo{margin-right:0}
+@media(max-width:620px){.catalog-header{padding-top:13px;padding-bottom:13px}}
+
+/* Every catalog card has one action, including its title and price. */
+.catalog-card[data-item],.catalog-card[data-booking]{cursor:pointer}
+.catalog-card[data-item]:hover .item-details,.catalog-card:focus-within .item-details{color:var(--red)}
+.catalog-card:focus-within{background:#e9e6dd}
+
+/* One catalog item per row. */
+.catalog-grid{grid-template-columns:minmax(0,1fr);border-left:0}
+.catalog-card{display:grid;grid-template-columns:120px minmax(0,1fr) 150px 135px;align-items:center;gap:28px;min-height:106px;padding:24px 18px;border-right:0}
+.card-top{flex-direction:column;gap:8px;font-size:9px}
+.catalog-card h2{font-size:25px;line-height:1.25;margin:0;overflow-wrap:break-word}
+.catalog-card .item-price{font-size:26px;margin:0;white-space:nowrap}
+.catalog-card .item-price small{display:block;margin-top:4px;font-size:11px}
+.catalog-card .item-details{border-top:0;padding:12px 0;gap:14px;font-size:10px;min-height:44px}
+@media(max-width:1000px) and (min-width:621px){.catalog-card{grid-template-columns:85px minmax(0,1fr) 110px 110px;gap:18px;padding:22px 10px}.catalog-card h2{font-size:22px}.catalog-card .item-price{font-size:23px}.card-top{font-size:8px}}
+@media(max-width:620px){.catalog-card{grid-template-columns:minmax(0,1fr) auto;gap:12px 18px;padding:20px 0;min-height:0}.card-top{grid-column:1/-1;flex-direction:row;justify-content:space-between;font-size:8px}.catalog-card h2{grid-column:1;grid-row:2;font-size:22px}.catalog-card .item-price{grid-column:2;grid-row:2;font-size:23px;text-align:right}.catalog-card .item-details{grid-column:1/-1;justify-self:end;width:auto;gap:24px;padding:8px 0 0;min-height:36px;font-size:10px}.catalog-card .item-details .arrow{width:30px}}
+
+/* Category directory: each image opens its own catalog. */
+.catalog-page .catalog-directory{padding:44px 4.3vw 70px;background:#f7f6f3;color:#171717}
+.catalog-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:#76716a;margin-bottom:30px}
+.catalog-breadcrumb a:hover{color:var(--red)}
+.catalog-directory-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;padding-bottom:26px;border-bottom:1px solid #b52618}
+.catalog-directory h1{font:400 clamp(38px,4.6vw,66px)/1.12 var(--display);letter-spacing:-.02em;margin:0;max-width:850px;width:auto;transform:none;white-space:normal;scroll-margin-top:120px}
+.catalog-directory-heading>p{font-size:13px;line-height:1.7;color:#716b61;margin:0;max-width:330px}
+.catalog-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.catalog-category-card{display:block;min-width:0;text-align:center}
+.category-photo{aspect-ratio:1;overflow:hidden;background:#151515}
+.category-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.catalog-category-card:nth-child(1) img{object-position:50% 44%}
+.catalog-category-card:nth-child(2) img{object-position:50% 40%}
+.catalog-category-card:nth-child(3) img{object-position:50% 34%}
+.catalog-category-card h2{font:400 clamp(23px,2vw,30px)/1.2 var(--display);margin:23px auto 12px;min-height:2.4em;max-width:260px}
+.catalog-category-card>p{display:flex;align-items:center;justify-content:center;gap:18px;font:12px/1.5 var(--sans);color:#777067;margin:0}
+.catalog-category-card>p span{color:var(--red);font-size:22px;line-height:1}
+.catalog-category-card:focus-visible{outline:2px solid var(--red);outline-offset:7px}
+.catalog-back{display:inline-flex;min-height:44px;align-items:center;color:var(--red);font-size:13px;border-bottom:1px solid #c7c1b6}
+.catalog-directory:has(.catalog-back:not([hidden])){padding-bottom:26px}
+.catalog-page .catalog-body{background:#f7f6f3;padding-top:20px}
+.catalog-body .catalog-tools{border-top:0}
+@media(hover:hover){.catalog-category-card:hover img{transform:scale(1.035)}.catalog-category-card:hover h2{color:var(--red)}}
+@media(max-width:1000px){.catalog-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}.catalog-category-card h2{min-height:0}.catalog-directory-heading{align-items:flex-start}.catalog-directory-heading>p{max-width:220px}}
+@media(max-width:600px){.catalog-page .catalog-directory{padding:30px 20px 45px}.catalog-breadcrumb{font-size:11px;gap:8px;margin-bottom:24px}.catalog-directory-heading{display:block;margin-bottom:28px;padding-bottom:22px}.catalog-directory h1{font-size:37px;overflow-wrap:break-word}.catalog-directory-heading>p{margin-top:14px;max-width:none;font-size:12px}.catalog-category-grid{gap:30px 16px}.catalog-category-card h2{font-size:23px;line-height:1.25;min-height:2.5em;margin:15px auto 8px}.catalog-category-card>p{font-size:10px;gap:8px}.catalog-category-card>p span{font-size:17px}.catalog-directory:has(.catalog-back:not([hidden])){padding-bottom:20px}.catalog-page .catalog-body{padding-left:20px;padding-right:20px}}
+@media(prefers-reduced-motion:reduce){.category-photo img{transition:none}}
+
+/* Approved full-height photographic directory. */
+.catalog-directory-view .catalog-directory{position:relative;padding:0;background:#050505;color:#fff}
+.catalog-directory-view .catalog-breadcrumb,.catalog-directory-view .catalog-directory-heading{display:none}
+.catalog-directory-view .catalog-help{display:none}
+.catalog-directory-view .catalog-header{background:#0a0a0a;border-color:#292929;color:#eee}
+.catalog-directory-view .catalog-header .header-logo img{filter:grayscale(1) brightness(0) invert(1)}
+.catalog-panel-stage{position:relative;isolation:isolate;background:#050505}
+.catalog-panel-heading{position:absolute;top:32px;left:50%;transform:translateX(-50%);display:flex;gap:40px;align-items:flex-start;z-index:2;pointer-events:none;text-align:center;font:400 32px/1.3 var(--display);letter-spacing:.32em;color:#fff}
+.catalog-panel-heading>span{height:1px;width:110px;background:#c6c6c6;margin-top:21px}
+.catalog-panel-heading small{display:block;color:#d12319;font:16px/1.5 serif;letter-spacing:.65em;white-space:nowrap;margin:12px 0 0 8px}
+.catalog-panel-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));min-height:640px;height:clamp(640px,66.667vw,1100px);max-height:1100px}
+.catalog-panel{position:relative;min-width:0;display:flex;align-items:flex-end;isolation:isolate;padding:0 clamp(22px,3.25vw,50px) clamp(45px,5.5vw,85px);color:#f4f4f4}
+.catalog-panel-photo{position:absolute;inset:0;z-index:-1;background-image:url('assets/catalog-panels-clean.png');background-size:400% 100%;background-position:calc(var(--panel)*100%/3) center;background-repeat:no-repeat}
+.catalog-panel-copy{width:100%}
+.catalog-panel-number{font:400 clamp(18px,1.7vw,27px)/1 var(--micro);color:#e02b20}
+.catalog-panel h2{font:400 clamp(30px,3.8vw,60px)/1.15 var(--display);letter-spacing:.09em;margin:12px 0 16px;white-space:nowrap}
+.catalog-panel:last-child h2{font-size:clamp(26px,3.25vw,51px);letter-spacing:.05em}
+.catalog-panel-copy>p{font:400 clamp(10px,.94vw,15px)/1.4 var(--sans);letter-spacing:.08em;height:4.2em;margin:0 0 22px}
+.catalog-panel-button{border:1px solid #d72318;display:flex;justify-content:space-between;align-items:center;gap:22px;max-width:212px;min-height:50px;padding:12px 20px;font:400 12px/1 var(--sans);letter-spacing:.2em;background:#0003;transition:background .2s}
+.catalog-panel-button>span{color:#e32b20;font-size:28px;line-height:.5;letter-spacing:0}
+.catalog-panel:focus-visible{outline:2px solid #e32b20;outline-offset:-4px}
+@media(hover:hover){.catalog-panel:hover .catalog-panel-button{background:#b52618;color:#fff}.catalog-panel:hover .catalog-panel-button>span{color:#fff}}
+.catalog-jewelry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;border:0}
+.catalog-jewelry-grid .jewelry-price-card{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:270px;padding:25px;border:1px solid #d5d0c6;background:#f0eee8}
+.catalog-jewelry-grid .card-top{flex-direction:row;justify-content:space-between;font-size:9px;color:#777}
+.catalog-jewelry-grid .jewelry-price-card h2{font:400 24px/1.25 var(--display);margin:27px 0 22px;max-width:none}
+.catalog-jewelry-grid .jewelry-price-card .item-price{margin-top:auto;font-size:28px;text-align:left}
+.catalog-jewelry-grid .jewelry-price-card .item-details{display:flex;justify-content:space-between;width:100%;border-top:1px solid #cec8be;margin-top:22px;padding-top:16px;color:#a4261b}
+@media(max-width:1100px){.catalog-panel{padding-left:22px;padding-right:22px}.catalog-jewelry-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-panel-button{font-size:10px;padding:12px;gap:10px}}
+@media(max-width:767px){.catalog-panel-grid{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;max-height:none;min-height:0}.catalog-panel{min-height:650px;padding:0 26px 38px}.catalog-panel-heading{top:24px;font-size:24px;gap:20px}.catalog-panel-heading>span{width:40px;margin-top:15px}.catalog-panel-heading small{font-size:12px;margin-top:6px}.catalog-panel h2{font-size:40px}.catalog-panel:last-child h2{font-size:34px}.catalog-panel-number{font-size:22px}.catalog-panel-copy>p{font-size:11px}.catalog-panel-button{font-size:11px}.catalog-jewelry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.catalog-panel{min-height:520px;padding:0 18px 30px}.catalog-panel h2{font-size:31px;letter-spacing:.05em}.catalog-panel:last-child h2{font-size:26px;letter-spacing:.02em}.catalog-panel-copy>p{font-size:9px;letter-spacing:.035em}.catalog-panel-button{padding:12px 10px;font-size:9px;letter-spacing:.1em;min-height:44px}.catalog-panel-button>span{font-size:23px}.catalog-jewelry-grid{gap:12px}.catalog-jewelry-grid .jewelry-price-card{padding:15px;min-height:280px}.catalog-jewelry-grid .jewelry-price-card h2{font-size:21px}.catalog-jewelry-grid .jewelry-price-card .item-price{font-size:25px}.catalog-jewelry-grid .card-top{font-size:8px}}
+@font-face{font-family:CatalogOswald;src:url('assets/fonts/oswald-200.ttf') format('truetype');font-style:normal;font-weight:200;font-display:swap}
+.catalog-panel-heading{font-family:CatalogOswald,var(--display);font-weight:200}
+.catalog-panel h2,.catalog-panel:last-child h2{font-family:CatalogOswald,var(--display);font-weight:200;font-size:clamp(40px,4.85vw,75px);letter-spacing:.12em;transform:scaleX(.74);transform-origin:left;width:135.13%}
+@media(max-width:767px){.catalog-panel h2,.catalog-panel:last-child h2{font-size:52px;letter-spacing:.08em}}
+@media(max-width:480px){.catalog-panel h2,.catalog-panel:last-child h2{font-size:42px;letter-spacing:.055em}}
+
+/* Four independent cards on black; product catalog cards include photography. */
+.catalog-directory-view{background:#050505}
+.catalog-directory-view .catalog-panel-stage{padding:0 4px 4px;background:#050505}
+.catalog-directory-view .catalog-panel-grid{gap:4px}
+.catalog-panel-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center;background:none}
+.catalog-panel:nth-child(1) .catalog-panel-photo{object-position:50% 44%}
+.catalog-panel:nth-child(2) .catalog-panel-photo{object-position:50% 42%}
+.catalog-panel:nth-child(3) .catalog-panel-photo{object-position:52% 38%}
+.catalog-panel:nth-child(4) .catalog-panel-photo{object-position:50% 48%}
+.catalog-panel::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.05) 26%,rgba(0,0,0,.26) 54%,rgba(0,0,0,.94) 100%)}
+.catalog-jewelry-grid .jewelry-price-card{min-height:460px;padding:0 20px 22px;overflow:hidden}
+.catalog-product-photo{display:block;width:calc(100% + 40px);height:235px;margin:0 -20px 18px;object-fit:cover;background:#151515;filter:saturate(.82) contrast(1.03)}
+.catalog-jewelry-grid .jewelry-price-card h2{margin:17px 0 16px}
+.catalog-jewelry-grid .jewelry-price-card .item-price{margin-top:auto}
+@media(max-width:1000px){.catalog-jewelry-grid .jewelry-price-card{min-height:420px}.catalog-product-photo{height:210px}}
+@media(max-width:600px){.catalog-directory-view .catalog-panel-stage{padding:0 2px 2px}.catalog-directory-view .catalog-panel-grid{gap:2px}.catalog-panel{min-height:500px}.catalog-jewelry-grid .jewelry-price-card{min-height:360px;padding:0 12px 16px}.catalog-product-photo{width:calc(100% + 24px);height:170px;margin:0 -12px 14px}.catalog-jewelry-grid .jewelry-price-card h2{font-size:19px;margin:12px 0}.catalog-jewelry-grid .jewelry-price-card .item-price{font-size:23px}.catalog-jewelry-grid .jewelry-price-card .item-details{margin-top:14px}}
+
+.catalog-page{background:#050505;color:#f2f1ed}
+.catalog-page .catalog-header{background:#080808;color:#f2f1ed;border-color:#292929}
+.catalog-page .catalog-header .header-logo img{filter:grayscale(1) brightness(0) invert(1)}
+.catalog-page:not(.catalog-directory-view) .catalog-directory,.catalog-page:not(.catalog-directory-view) .catalog-body{background:#050505;color:#f2f1ed}
+.catalog-page:not(.catalog-directory-view) .catalog-directory{border-bottom:1px solid #292929}
+.catalog-page:not(.catalog-directory-view) .catalog-directory-heading{border-color:#a9231a}
+.catalog-page:not(.catalog-directory-view) .catalog-directory-heading>p,.catalog-page:not(.catalog-directory-view) .catalog-breadcrumb,.catalog-page:not(.catalog-directory-view) .catalog-count-row,.catalog-page:not(.catalog-directory-view) .catalog-notice{color:#96928b}
+.catalog-page:not(.catalog-directory-view) .catalog-search-row input,.catalog-page:not(.catalog-directory-view) .catalog-search-row select{background:#0b0b0b;color:#eee;border-color:#3b3b3b}
+.catalog-page:not(.catalog-directory-view) .catalog-search-row label>span{color:#aaa59d}
+.catalog-page:not(.catalog-directory-view) .catalog-jewelry-grid .jewelry-price-card{background:#101010;border-color:#303030;color:#f2f1ed}
+.catalog-page:not(.catalog-directory-view) .catalog-card:hover,.catalog-page:not(.catalog-directory-view) .catalog-card:focus-within{background:#181818}
+.catalog-page:not(.catalog-directory-view) .catalog-jewelry-grid .card-top{color:#8d8982}
+.catalog-page:not(.catalog-directory-view) .catalog-jewelry-grid .jewelry-price-card .item-details{border-color:#333}
+.catalog-page:not(.catalog-directory-view) .catalog-empty{border-color:#333}
+
+/* The four-category directory always fits in one viewport. */
+.catalog-directory-view{display:flex;flex-direction:column;height:100svh;min-height:0;overflow:hidden}
+.catalog-directory-view>.catalog-header{flex:0 0 auto}
+.catalog-directory-view>vibezilla-credit{display:none}
+.catalog-directory-view>main{flex:1 1 auto;min-height:0}
+.catalog-directory-view .catalog-directory,.catalog-directory-view .catalog-panel-stage,.catalog-directory-view .catalog-panel-grid{height:100%;min-height:0;max-height:none}
+.catalog-directory-view .catalog-panel-grid{grid-template-rows:minmax(0,1fr)}
+.catalog-directory-view .catalog-panel{min-height:0;padding-bottom:clamp(24px,4.4vh,58px)}
+.catalog-directory-view .catalog-panel-copy>p{margin-bottom:clamp(12px,2.4vh,22px)}
+.catalog-directory-view .catalog-panel-heading{top:clamp(15px,3vh,32px)}
+@media(max-width:767px){.catalog-directory-view .catalog-panel-grid{height:100%;grid-template-rows:repeat(2,minmax(0,1fr))}.catalog-directory-view .catalog-panel{min-height:0;padding:0 18px clamp(14px,2.5vh,26px)}.catalog-directory-view .catalog-panel-heading{top:10px}.catalog-directory-view .catalog-panel h2,.catalog-directory-view .catalog-panel:last-child h2{font-size:clamp(27px,8.2vw,40px);margin:6px 0 7px}.catalog-directory-view .catalog-panel-copy>p{height:auto;min-height:2.6em;margin:0 0 8px;font-size:clamp(7px,2.25vw,10px)}.catalog-directory-view .catalog-panel-number{font-size:clamp(14px,4vw,19px)}.catalog-directory-view .catalog-panel-button{min-height:38px;padding:8px 10px}}
+@media(max-width:620px){.catalog-page .catalog-header .menu-toggle{background:#080808;color:#fff;border-color:#444}.catalog-page .catalog-header .menu-toggle .menu-label{display:none}}
+
+/* Jewelry shop cards: large product image and clear commercial information. */
+.catalog-jewelry-view{background:#f7f7f5;color:#191c29}
+.catalog-jewelry-view .catalog-header{background:#fff;color:#191c29;border-color:#dedede}
+.catalog-jewelry-view .catalog-header .header-logo img{filter:none}
+.catalog-jewelry-view .catalog-directory,.catalog-jewelry-view .catalog-body{background:#f7f7f5!important;color:#191c29!important}
+.catalog-jewelry-view .catalog-directory{border-color:#dedede!important}
+.catalog-jewelry-view .catalog-directory-heading{border-color:#d9d9d9!important}
+.catalog-jewelry-view .catalog-directory-heading>p,.catalog-jewelry-view .catalog-breadcrumb,.catalog-jewelry-view .catalog-count-row,.catalog-jewelry-view .catalog-notice{color:#747780!important}
+.catalog-jewelry-view .catalog-search-row input,.catalog-jewelry-view .catalog-search-row select{background:#fff!important;color:#191c29!important;border-color:#d8d8d8!important}
+.catalog-jewelry-view .catalog-search-row label>span{color:#676a72!important}
+.catalog-jewelry-view .catalog-jewelry-grid{gap:0;border-top:1px solid #dedede;border-left:1px solid #dedede;background:#fff}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card{min-height:0;padding:18px;background:#fff!important;color:#191c29!important;border:0;border-right:1px solid #dedede;border-bottom:1px solid #dedede}
+.catalog-jewelry-view .catalog-product-photo{width:100%;height:180px;margin:0 0 16px;object-fit:cover;background:#f8f8f8;filter:none}
+.catalog-jewelry-view .catalog-jewelry-grid .card-top{display:none}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card h2{min-height:2.5em;margin:0 0 8px;font:400 clamp(17px,1.25vw,21px)/1.25 var(--sans);letter-spacing:-.015em}
+.catalog-product-availability{display:flex;align-items:center;gap:8px;margin:0 0 10px;color:#a9251c;font:400 13px/1.4 var(--sans)}
+.catalog-product-availability span{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#a9251c;color:#fff;font-size:13px}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price{margin:auto 0 0;font:600 clamp(23px,1.7vw,29px)/1.15 var(--sans);color:#191c29}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price small{font-size:12px;font-weight:400;color:#747780}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-details{margin:0;padding:9px 0 0;border-color:#dedede;color:#a9251c;font-size:9px}
+.catalog-jewelry-view .catalog-card:hover,.catalog-jewelry-view .catalog-card:focus-within{background:#fafafa!important}
+@media(max-width:1100px){.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card{min-height:0}.catalog-jewelry-view .catalog-product-photo{height:170px}}
+@media(max-width:620px){.catalog-jewelry-view .catalog-header .menu-toggle{background:#fff;color:#191c29;border-color:#d8d8d8}.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card{min-height:0;padding:10px}.catalog-jewelry-view .catalog-product-photo{width:100%;height:120px;margin:0 0 10px}.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card h2{min-height:3em;font-size:14px;margin-bottom:5px}.catalog-product-availability{gap:5px;margin-bottom:7px;font-size:10px}.catalog-product-availability span{width:15px;height:15px;font-size:9px}.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price{font-size:19px}.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-details{font-size:8px;padding-top:7px}}
+
+/* Jewelry as an editorial image gallery. */
+.catalog-jewelry-view,
+.catalog-jewelry-view .catalog-directory,
+.catalog-jewelry-view .catalog-body{background:#070707!important;color:#f3f1ec!important}
+.catalog-jewelry-view .catalog-header{background:#080808;color:#f3f1ec;border-color:#292929}
+.catalog-jewelry-view .catalog-header .header-logo img{filter:grayscale(1) brightness(0) invert(1)}
+.catalog-jewelry-view .catalog-directory{border-color:#292929!important}
+.catalog-jewelry-view .catalog-directory-heading{border-color:#98241b!important}
+.catalog-jewelry-view .catalog-directory-heading>p,
+.catalog-jewelry-view .catalog-breadcrumb{color:#96928b!important}
+.catalog-jewelry-view .catalog-tools,
+.catalog-jewelry-view .catalog-count-row,
+.catalog-jewelry-view .catalog-notice{display:none}
+.catalog-jewelry-view .catalog-body{padding-top:0!important}
+.catalog-jewelry-view .catalog-jewelry-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:6px;
+  border:0;
+  background:#070707
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card{
+  position:relative;
+  isolation:isolate;
+  display:block;
+  aspect-ratio:3/4;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  border:0;
+  background:#111!important;
+  color:#fff!important
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 43%,rgba(0,0,0,.18) 61%,rgba(0,0,0,.94) 100%)
+}
+.catalog-jewelry-view .catalog-product-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  margin:0;
+  object-fit:cover;
+  background:#111;
+  filter:saturate(.82) brightness(.88) contrast(1.04);
+  transition:transform .38s ease,filter .38s ease
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card h2{
+  position:absolute;
+  z-index:2;
+  left:20px;
+  right:20px;
+  bottom:68px;
+  min-height:0;
+  margin:0;
+  color:#fff;
+  font:400 clamp(17px,1.35vw,23px)/1.2 var(--display);
+  letter-spacing:.01em;
+  text-wrap:balance
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price{
+  position:absolute;
+  z-index:2;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  margin:0;
+  color:#fff;
+  font:500 clamp(22px,1.8vw,30px)/1 var(--sans)
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price::before{
+  content:"";
+  display:inline-block;
+  width:25px;
+  height:2px;
+  margin:0 10px 6px 0;
+  background:#c92c20
+}
+.catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price small{color:#c5c2bc}
+.catalog-jewelry-view .catalog-card:hover,
+.catalog-jewelry-view .catalog-card:focus-within{background:#111!important}
+.catalog-jewelry-view .jewelry-price-card:focus-visible{outline:2px solid #d32d22;outline-offset:-4px}
+@media(hover:hover){
+  .catalog-jewelry-view .jewelry-price-card:hover .catalog-product-photo{transform:scale(1.035);filter:saturate(.92) brightness(.96) contrast(1.03)}
+}
+@media(max-width:1000px){
+  .catalog-jewelry-view .catalog-jewelry-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .catalog-jewelry-view .catalog-header .menu-toggle{background:#080808;color:#fff;border-color:#444}
+  .catalog-jewelry-view .catalog-directory{padding-bottom:28px}
+  .catalog-jewelry-view .catalog-body{padding-left:3px;padding-right:3px}
+  .catalog-jewelry-view .catalog-jewelry-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+  .catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card{aspect-ratio:2/3;padding:0}
+  .catalog-jewelry-view .catalog-product-photo{position:absolute;width:100%;height:100%;margin:0}
+  .catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card h2{left:12px;right:12px;bottom:50px;min-height:0;margin:0;font-size:14px;line-height:1.18}
+  .catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price{left:12px;right:12px;bottom:14px;font-size:18px}
+  .catalog-jewelry-view .catalog-jewelry-grid .jewelry-price-card .item-price::before{width:18px;margin-right:7px;margin-bottom:5px}
+}

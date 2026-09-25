@@ -1,0 +1,47 @@
+.portfolio-page{
+  --night:#090607;
+  --line:#ffffff2b;
+  background:var(--night);
+  color:#eeeae1;
+  color-scheme:dark;
+}
+.portfolio-page .header{background:#16090ef5;box-shadow:0 1px 0 var(--line)}
+.portfolio-page .header nav a{font-size:13px}
+.portfolio-page .header nav a[aria-current]{color:#e34935}
+.portfolio-page .header .menu-toggle,.portfolio-page .header nav.open{background:#170a0e;color:#eeeae1;border-color:#ffffff35}
+.portfolio-page main{padding-top:var(--header-height)}
+.archive-collection{padding:56px var(--gutter) 72px;max-width:2000px;margin:auto;scroll-margin-top:12px}
+.collection-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;border-top:1px solid var(--line);padding-top:26px}
+.collection-toolbar>div:last-child{text-align:right}
+.collection-toolbar h1{margin:0}
+.collection-toolbar p{font:11px var(--micro);color:#9a6c73;margin:8px 0 0}
+.archive-filters{display:flex;border-bottom:1px solid var(--line)}
+.archive-filters button{border:0;min-width:100px;min-height:44px;background:none;color:#cbbfc0;font:12px var(--sans);padding:12px 20px}
+.archive-filters button:hover{background:#ffffff12}
+.archive-filters button[aria-pressed=true]{background:var(--red);color:#fff}
+.archive-filters button[aria-pressed=true]:hover{background:#c63222}
+.collection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.portfolio-card{position:relative;min-width:0}
+.portfolio-photo{position:relative;display:block;width:100%;aspect-ratio:1;padding:0;border:1px solid #ffffff12;background:#170a0e;overflow:hidden;text-align:left}
+.portfolio-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.portfolio-photo:hover img,.portfolio-photo:focus-visible img{transform:scale(1.045);filter:brightness(1.07)}
+.portfolio-photo:focus-visible{outline:2px solid var(--darya);outline-offset:2px}
+.archive-footer{padding:40px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:32px}
+.archive-wordmark{font:22px var(--display);letter-spacing:.12em}
+.archive-wordmark span{display:block;font:9px var(--micro);letter-spacing:.13em;color:#9a6c73;margin-top:10px}
+.archive-footer nav{display:flex;gap:24px;flex-wrap:wrap;font-size:11px;color:#bfaeb0}
+.archive-footer>a:last-child{font-size:12px}
+.portfolio-page .booking-dialog{color:var(--ink);color-scheme:light}
+.portfolio-lightbox{padding:0;border:1px solid #ffffff32;background:#170a0e;color:#eee;width:min(1000px,94vw);max-width:94vw;max-height:94dvh;overflow-y:auto}
+.portfolio-lightbox::backdrop{background:#000d;backdrop-filter:blur(8px)}
+.lightbox-head{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;gap:16px}
+.lightbox-head p{font:10px var(--micro);letter-spacing:.14em;color:#cbbfc0;margin:0 0 7px}
+.lightbox-head h2{font:20px var(--display);margin:0}
+.lightbox-close,.lightbox-footer button{min-width:44px;min-height:44px;border:1px solid #fff4;background:none;color:#fff;font-size:23px}
+.lightbox-image{position:relative;height:min(65dvh,730px);background:#090607}
+.lightbox-image img{width:100%;height:100%;object-fit:contain}
+.lightbox-footer{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;font:12px var(--micro)}
+.lightbox-booking{display:block;width:100%;border:0;border-top:1px solid #fff3;background:none;color:#ddd;min-height:44px;font:12px var(--sans)}
+@media(max-width:1099px){.collection-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.archive-footer{flex-wrap:wrap}.archive-filters button{min-width:80px}.portfolio-page .header nav a{font-size:16px}}
+@media(max-width:767px){.archive-collection{padding-top:36px;padding-bottom:40px}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}.collection-toolbar{flex-wrap:wrap;gap:18px}.archive-filters{width:100%;overflow-x:auto;scrollbar-width:none}.archive-filters button{flex:1;min-width:auto;padding:12px 10px;font-size:11px}.collection-toolbar>div:last-child{display:flex;width:100%;align-items:center;justify-content:space-between;text-align:left}.collection-toolbar p{margin:0}.archive-footer{padding:32px var(--gutter);gap:28px}.archive-footer nav{order:3;width:100%;gap:16px}.lightbox-head{padding:12px}.lightbox-head h2{font-size:17px}.lightbox-image{height:60dvh}.lightbox-footer{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){.portfolio-photo img{transition:none}}

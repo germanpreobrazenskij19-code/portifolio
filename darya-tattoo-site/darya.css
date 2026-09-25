@@ -1,0 +1,418 @@
+:root{--red:#b52618;--darya:#b52618;--darya-dark:#73180f}
+body{--photo-grade:saturate(.82) contrast(1.06) brightness(.9)}
+.darya-logo{display:flex!important;justify-content:flex-start;align-items:center;width:164px!important;min-width:164px;height:54px;color:inherit;line-height:1;overflow:hidden}
+.darya-logo img{display:block;width:160px!important;height:54px!important;object-fit:contain;object-position:center;filter:none!important}
+.header{position:fixed;top:0;left:0;right:0;padding:14px var(--gutter);min-height:80px;background:linear-gradient(#16070ce8,#16070c9c,transparent);color:#fff;z-index:20}
+.header.is-scrolled{background:#19090ef2;backdrop-filter:blur(12px)}
+.header nav a{font-size:13px}
+.darya-hero{height:min(900px,100svh);min-height:680px;background:#f2f0e9}
+.darya-hero .hero-art{inset:0;background:#f2f0e9 url('assets/video/hero-motion-v2-poster.jpg') center/cover no-repeat}
+.darya-hero .hero-art video{z-index:0}
+.hero-back-overlay{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 0 52%,rgba(0,0,0,.18) 58%,#000 69%);mask-image:linear-gradient(90deg,transparent 0 52%,rgba(0,0,0,.18) 58%,#000 69%)}
+.darya-hero .hero-copy{left:40%;top:51%;width:32%;transform:translateY(-50%);color:#111}
+.darya-hero .hero-copy h1{font-size:clamp(62px,6.5vw,104px);white-space:normal;width:120%}
+.darya-hero .hero-kicker{margin:0 0 24px;font:500 10px/1.5 var(--micro);letter-spacing:.24em;color:#5b5650}
+.darya-hero .hero-description{color:#423f3b}
+.red-rule,.services-panels-heading>div>span{background:var(--darya)}
+.cta{background:var(--darya);border-color:#a93246}.cta:hover{background:#8e1e31}
+.work-strip .work-image img{filter:saturate(.78) contrast(1.08) brightness(.86)}
+.work-strip .work-card:hover .work-image img{filter:saturate(.9) contrast(1.05) brightness(.98)}
+.darya-studio.studio-section--triptych{height:auto;min-height:0;padding:clamp(64px,7vw,112px) var(--gutter);display:flex;flex-direction:column;align-items:stretch;gap:clamp(34px,4vw,58px);background:#080707}
+.darya-studio .studio-montage-title{position:static;order:0;padding:0;text-align:left;text-shadow:none}
+.darya-studio .studio-montage-title .section-kicker{margin:0 0 14px;color:#a5a5a1}
+.darya-studio.studio-section--triptych #studio-title{font-size:clamp(50px,6vw,92px);line-height:.94}
+.darya-studio.studio-section--triptych #studio-title span{padding-bottom:10px}
+.darya-studio .studio-montage{position:static;inset:auto;order:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);width:100%;align-self:stretch;background:transparent;z-index:auto}
+.darya-studio .studio-cut{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;border:1px solid #282828;background:#111;filter:grayscale(1) sepia(.2) hue-rotate(345deg) saturate(.7) brightness(.68) contrast(1.12)}
+.darya-studio .studio-cut--mobile{display:none}
+.darya-studio.studio-section--triptych::after{display:none}
+.studio-section--triptych #studio-title span{border-bottom-color:var(--darya)}
+.services-panels-heading>p{color:#6a5759}
+#services.services-panels::before{background:var(--darya)}
+.service-panel::before,.service-panel-action{border-color:var(--darya)}
+.service-panel-action{color:var(--darya-dark)}
+@media(hover:hover){.service-panel:hover .service-panel-action{background:var(--darya);color:#fff}}
+.faq-intro h2 span,.footer-invitation h2 span,.faq-kicker{color:var(--darya)}
+.footer-brand{letter-spacing:.16em}
+.catalog-header{min-height:76px}.catalog-header .darya-logo{color:inherit}
+.catalog-panel-heading{color:#fff}.catalog-panel-heading>span{background:#cbb7ba}
+.catalog-panel::after{background:linear-gradient(180deg,rgba(0,0,0,.08) 18%,rgba(0,0,0,.28) 54%,rgba(0,0,0,.94) 100%)}
+.catalog-panel-button{border-color:#a93246}.catalog-panel-button>span{color:#df6678}
+@media(hover:hover){.catalog-panel:hover .catalog-panel-button{background:var(--darya)}}
+.catalog-page:not(.catalog-directory-view) .catalog-directory-heading{border-color:var(--darya)}
+.catalog-page:not(.catalog-directory-view) .catalog-body{padding-bottom:80px}
+.catalog-page:not(.catalog-directory-view) .catalog-grid{border-color:#41212a}
+.catalog-page:not(.catalog-directory-view) .catalog-card{border-color:#41212a;background:#12090c;min-height:240px}
+.catalog-page:not(.catalog-directory-view) .catalog-card:hover{background:#1d0b11}
+.catalog-page:not(.catalog-directory-view) .item-details{color:#e3a3ad;border-color:#67313b}
+.darya-portfolio{padding-top:125px}
+.portfolio-page .header{background:#19090ef2}
+.portfolio-page .collection-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.portfolio-page .collection-grid .portfolio-photo{aspect-ratio:1;min-height:0}
+.portfolio-page .portfolio-photo img{filter:saturate(.78) contrast(1.08) brightness(.9)}
+.portfolio-page .archive-filters button[aria-pressed=true]{background:var(--darya)}
+.portfolio-page .archive-wordmark{letter-spacing:.16em}
+
+/* Japanese night garden footer */
+.footer-new{position:relative;isolation:isolate;overflow:hidden;min-height:680px;background:#090607;color:#f3efe6;border-top:1px solid #41212a;padding-top:72px}
+.footer-new::before{content:"";position:absolute;z-index:-1;inset:auto -3vw -2px -3vw;height:min(72vw,650px);background:url('assets/darya/footer-cranes-sakura.png') center bottom/contain no-repeat;opacity:.7;pointer-events:none}
+.footer-new::after{content:"";position:absolute;z-index:-2;width:min(34vw,500px);aspect-ratio:1;border-radius:50%;right:20%;bottom:7%;background:radial-gradient(circle at 43% 42%,#9a2e25 0 42%,#581713 58%,transparent 70%);opacity:.42;pointer-events:none}
+.footer-invitation{position:relative;border-color:#ffffff35;padding-bottom:62px}
+.footer-invitation h2{color:#f6f2e9;text-shadow:0 4px 32px #000}
+.footer-invitation .cta{background:var(--darya);border-color:var(--darya);color:#fff}
+.footer-invitation .cta:hover{background:#9c2539;border-color:#9c2539}
+.footer-columns{position:relative;z-index:1;border:0;text-shadow:0 2px 18px #000;padding-top:72px}
+.footer-columns h3{color:#dc5a4c}
+.footer-studio p,.footer-columns .footer-hours{color:#cbbfc0}
+.footer-bottom{position:relative;z-index:1;border-color:#ffffff35;color:#bfaeb0;text-shadow:0 2px 12px #000}
+.footer-new .footer-text-button{color:inherit}
+
+/* Real-work portfolio: direct, dense, and visually unified. */
+.portfolio-page{background:#090607}
+.portfolio-page .darya-portfolio{position:relative;isolation:isolate;padding-top:126px;overflow:hidden}
+.portfolio-page .darya-portfolio::before{content:"";position:absolute;z-index:-1;top:46px;right:-9vw;width:min(54vw,850px);height:320px;background:url('assets/darya/footer-cranes-sakura.png') right top/contain no-repeat;opacity:.16;filter:saturate(.7);pointer-events:none}
+.portfolio-page .collection-toolbar{min-height:150px;border-color:#ffffff30;padding-top:34px;align-items:flex-end}
+.portfolio-page .collection-toolbar h1{font:400 clamp(36px,5vw,76px)/1 var(--display);letter-spacing:-.03em;color:#f3efe7;margin:0}
+.portfolio-page .collection-toolbar p{color:#b99a9f;letter-spacing:.12em}
+.portfolio-page .archive-filters{border-color:#ffffff30;background:#10070acc;backdrop-filter:blur(8px)}
+.portfolio-page .archive-filters button{color:#cbbfc0}
+.portfolio-page .collection-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.portfolio-page .collection-grid .portfolio-photo{aspect-ratio:1;background:#170a0e;border:1px solid #ffffff12}
+.portfolio-page .portfolio-photo img{filter:none;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.portfolio-page .portfolio-photo:hover img,.portfolio-page .portfolio-photo:focus-visible img{transform:scale(1.045);filter:brightness(1.07)}
+.portfolio-page .portfolio-photo:focus-visible{outline:2px solid var(--darya);outline-offset:2px}
+.portfolio-page .archive-source-note{color:#9a6c73;border-top:1px solid #ffffff20;padding-top:24px;max-width:none}
+@media(max-width:900px){
+ .darya-hero{min-height:760px;height:auto;padding-top:80px;display:flex;flex-direction:column}
+ .darya-hero .hero-art{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:16/9;background:#f2f0e9 url('assets/video/hero-motion-v2-poster.jpg') center/cover no-repeat}
+ .darya-hero .hero-copy{position:relative;inset:auto;transform:none;width:100%;padding:38px var(--gutter) 48px;background:#f1f0ea;color:#1d0b11}
+ .darya-hero .hero-copy h1{font-size:clamp(52px,11vw,80px);width:100%}
+ .darya-hero .hero-description{color:#6a5759}
+ .darya-hero .hero-kicker{color:#896d72}
+ .portfolio-page .collection-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .darya-studio .studio-montage{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .header{min-height:72px;padding:10px 18px}.darya-logo{min-width:90px}.darya-logo strong{font-size:21px}.darya-logo span{font-size:6px}
+ body .header>.menu-toggle{display:flex!important;position:absolute!important;right:18px!important;top:15px!important;z-index:1000!important;width:44px!important;height:42px!important;padding:0!important;justify-content:center!important;background:#f1f0ea!important;color:#111!important;border:1px solid #c9c7bf!important;opacity:1!important;visibility:visible!important;transform:none!important}
+ body .header>.menu-toggle>span:last-child{font-size:18px}
+ body .header>.header-cta{display:none!important}
+ .darya-hero{padding-top:72px;min-height:0}.darya-hero .hero-art{aspect-ratio:16/9;background-position:center}
+ .darya-hero .hero-copy{padding:30px 20px 40px}.darya-hero .hero-copy h1{font-size:50px}
+ .darya-studio.studio-section--triptych{height:auto;padding:56px 18px;gap:30px}
+ .darya-studio .studio-montage{grid-template-columns:1fr}
+ .darya-studio .studio-cut--desktop{display:none}
+ .darya-studio .studio-cut--mobile{display:block;aspect-ratio:4/5}
+ .services-panels-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .portfolio-page .collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+ .darya-portfolio{padding-top:100px}
+ .archive-filters{overflow-x:auto;width:100%;scrollbar-width:none}.archive-filters button{flex:0 0 auto;min-width:auto;padding:12px 14px}
+ .footer-new{min-height:820px;padding-top:46px}.footer-new::before{height:500px;background-size:auto 430px;background-position:68% bottom;opacity:.52}.footer-new::after{width:300px;right:-40px;bottom:110px}.footer-columns{padding-top:42px}.portfolio-page .collection-toolbar{align-items:stretch;flex-direction:column-reverse;min-height:0;gap:22px}.portfolio-page .collection-toolbar>div:last-child{text-align:left}.portfolio-page .darya-portfolio::before{width:92vw;right:-28vw;opacity:.12}
+}
+
+/* 2026 premium pass: one wine-black studio language across every page. */
+:root{
+ --red:#a51f32;
+ --darya:#8e1e31;
+ --darya-dark:#26080f;
+ --wine:#641321;
+ --wine-black:#16070c;
+ --ivory:#f7f3eb;
+}
+body{background:#080707;--photo-grade:none}
+
+/* Header and navigation */
+.header,.catalog-header{
+ background:linear-gradient(90deg,#10080bfa,#1d0a10f5 55%,#10080bfa)!important;
+ color:var(--ivory)!important;
+ border-bottom:1px solid #ab35465c;
+ box-shadow:0 10px 30px #0003;
+ backdrop-filter:blur(16px) saturate(.8);
+}
+.header.is-scrolled,.portfolio-page .header{background:#16090ef5!important}
+.darya-logo img{filter:none!important}
+.header nav a,.catalog-header nav a{position:relative;color:#f6efea;text-shadow:none;opacity:.82;transition:opacity .2s,color .2s}
+.header nav a::after,.catalog-header nav a::after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:1px;background:#d75a6e;transition:right .25s ease}
+.header nav a:hover,.catalog-header nav a:hover{color:#fff;opacity:1}
+.header nav a:hover::after,.catalog-header nav a:hover::after,.header nav a[aria-current=page]::after,.catalog-header nav a[aria-current=page]::after{right:0}
+
+/* Clean Japanese ticket buttons. The surface stays light on hover. */
+.cta,.header-cta,.service-panel-action,.catalog-panel-button{
+ border:1px solid #a8293d!important;
+ background:#faf7f1!important;
+ color:#4b0d18!important;
+ box-shadow:inset 0 0 0 3px #faf7f1,inset 0 0 0 4px #c14a5c45;
+ clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
+ transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease!important;
+}
+.cta:hover,.header-cta:hover,.service-panel:hover .service-panel-action,.catalog-panel:hover .catalog-panel-button{
+ background:#fff!important;color:#4b0d18!important;border-color:#d65368!important;
+ transform:translateY(-2px);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px #a8293d,0 9px 24px #16070c2e;
+}
+.header-cta{background:#8e1e31!important;color:#fff!important;border-color:#c94a5f!important;box-shadow:inset 0 0 0 3px #8e1e31,inset 0 0 0 4px #f7e6e86b}
+.header-cta:hover{background:#9c2539!important;color:#fff!important;box-shadow:inset 0 0 0 3px #9c2539,inset 0 0 0 4px #fff9,0 9px 24px #0005}
+.menu-toggle{background:#f8f4ed!important;color:#321017!important;border-color:#c6a8ad!important;box-shadow:none!important}
+
+/* Real work photography: the files already carry the unified studio grade. */
+.work-strip .work-image img,.portfolio-page .portfolio-photo img,.service-panel-image,.catalog-panel-photo{filter:none!important}
+.work-strip .work-card:hover .work-image img{filter:brightness(1.04)!important}
+.work-card{background:#180a0f}
+
+/* Compact two-screen film with its statement directly over the footage. */
+.darya-studio.studio-section--triptych{position:relative;height:clamp(460px,48vw,680px);padding:12px;margin:0;background:#070607;display:block;overflow:hidden}
+.darya-studio .studio-montage{position:absolute;inset:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:auto;height:auto;background:#10070a;z-index:0}
+.darya-studio .studio-cut{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 48%;border:0;filter:grayscale(1) sepia(.2) hue-rotate(310deg) saturate(.75) brightness(.58) contrast(1.18)}
+.darya-studio.studio-section--triptych::after{content:"";display:block;position:absolute;z-index:1;inset:12px;background:linear-gradient(180deg,#0b030730,transparent 28%,#09030769),radial-gradient(circle at center,transparent 10%,#0903075c 88%);pointer-events:none}
+.darya-studio .studio-montage-title{position:absolute;z-index:2;inset:0;display:grid;place-content:center;text-align:center;padding:20px;color:#fff;text-shadow:0 4px 34px #000;pointer-events:none}
+.darya-studio .studio-montage-title .section-kicker{font-size:9px;letter-spacing:.28em;color:#f0dce0;margin:0 0 16px}
+.darya-studio.studio-section--triptych #studio-title{font-size:clamp(45px,6.1vw,86px);line-height:.96;letter-spacing:.015em}
+.darya-studio.studio-section--triptych #studio-title span{border-bottom:3px solid #b3293e;padding-bottom:9px}
+
+/* Services: the red sun is now anchored to the ink garden, not floating alone. */
+#services.services-panels{background:#f4efe7;color:#170a0d;isolation:isolate}
+#services.services-panels::before{content:"";position:absolute;z-index:-2;inset:0;background:url('assets/darya/footer-cranes-sakura.png') 104% -32px/47% auto no-repeat;opacity:.16;border-radius:0;width:auto;height:auto;aspect-ratio:auto}
+#services.services-panels::after{content:"";position:absolute;z-index:-3;right:-4vw;top:-9vw;width:clamp(240px,31vw,480px);height:auto;aspect-ratio:1;border-radius:50%;clip-path:none;transform:none;background:radial-gradient(circle at 42% 42%,#ae2c3b 0 43%,#741525 60%,transparent 71%);opacity:.9}
+.services-panels-heading>p{color:#6a5759}
+.service-panel::before{border-color:#941f32}
+.service-panel-image{box-shadow:0 18px 45px #24080f25}
+.service-panel-action{background:#f7f2e9!important}
+
+/* FAQ becomes a deliberate wine-black interlude before the Japanese garden. */
+.faq-section{position:relative;isolation:isolate;background:radial-gradient(circle at 14% 24%,#7d1d2d 0 9%,transparent 9.3%),linear-gradient(118deg,#21080f,#080707 64%);color:#f8f1e9;border-color:#702234;overflow:hidden}
+.faq-section::after{content:"";position:absolute;z-index:-1;inset:0;background:url('assets/darya/footer-cranes-sakura.png') -12% 10%/55% auto no-repeat;opacity:.08;filter:grayscale(1)}
+.faq-japanese-mark{position:absolute;z-index:0;right:clamp(24px,5vw,86px);top:clamp(26px,5vw,70px);display:grid;grid-template-columns:auto 54px;grid-template-rows:auto auto;align-items:center;gap:8px 16px;color:#ef8b9b;pointer-events:none}
+.faq-japanese-mark span{grid-row:1/3;display:grid;place-items:center;width:72px;aspect-ratio:1;border:1px solid #c94a5f;font:400 35px/1 serif;transform:rotate(3deg);box-shadow:inset 0 0 0 5px #21080f,inset 0 0 0 6px #8e1e31}
+.faq-japanese-mark i{display:block;width:54px;height:1px;background:#c94a5f}
+.faq-japanese-mark b{font:500 8px/1 var(--micro);letter-spacing:.22em;white-space:nowrap}
+.faq-kicker,.faq-intro h2 span{color:#df6678}
+.faq-intro>p:not(.faq-kicker){color:#bfaeb0}
+.faq-ask{color:#f2dfe2;border-color:#a93246}
+.faq-list{border-color:#a84857}.faq-list details{border-color:#ffffff26}
+.faq-list summary{color:#f8f1e9}.faq-list summary>span{color:#df6678}.faq-list details[open] summary{color:#ef8b9b}
+.faq-answer p{color:#cbbfc0}.faq-answer a{color:#ef8b9b}
+
+/* Direct booking instead of the old form workflow. */
+.booking-direct-dialog{width:min(620px,calc(100vw - 32px));padding:52px;background:linear-gradient(145deg,#f8f4ec,#ede3dc);color:#21090f;border:1px solid #7b1c2d;box-shadow:0 30px 90px #0008}
+.booking-direct-dialog::before{content:"";position:absolute;right:-64px;top:-82px;width:220px;aspect-ratio:1;border-radius:50%;background:#8f1f32;opacity:.13}
+.booking-direct-dialog h2{font-size:clamp(40px,5vw,64px);line-height:.98;margin:0 0 20px}
+.booking-direct-dialog .eyebrow{color:#8e1e31;margin-bottom:24px}
+.booking-lead{max-width:420px;margin:0 0 32px;color:#6a5558;font-size:15px;line-height:1.7}
+.booking-contact-list{border-top:1px solid #9a6c73}
+.booking-contact-list a{display:grid;grid-template-columns:100px 1fr auto;align-items:center;gap:18px;min-height:74px;border-bottom:1px solid #b99a9f;padding:8px 2px;transition:color .2s,padding .2s}
+.booking-contact-list a:hover{color:#9d2034;padding-left:9px}
+.booking-contact-list small{font:9px/1.4 var(--micro);letter-spacing:.18em;color:#896d72}.booking-contact-list strong{font:400 21px/1.2 var(--display);letter-spacing:.04em}.booking-contact-list span{font-size:20px;color:#9d2034}
+.booking-hours{margin:24px 0 0;font:9px/1.5 var(--micro);letter-spacing:.18em;color:#84666b}
+
+/* Footer stays a night garden, with no leftover green interaction states. */
+.footer-invitation .cta{background:#f8f4ed!important;color:#4b0d18!important;border-color:#aa3144!important}
+.footer-invitation .cta:hover{background:#fff!important;color:#4b0d18!important;border-color:#d65368!important}
+.footer-columns h3{color:#e05b70}.footer-new a:hover,.footer-text-button:hover{color:#ef8090!important}
+
+.catalog-page:not(.catalog-directory-view) .catalog-card{background:#12090c;border-color:#41212a}.catalog-page:not(.catalog-directory-view) .catalog-card:hover{background:#1d0b11}.catalog-page:not(.catalog-directory-view) .item-details{color:#e3a3ad;border-color:#67313b}
+.catalog-panel-heading>span{background:#b73b4e}.catalog-panel-button>span{color:#8e1e31}
+.portfolio-page{background:#090607}.portfolio-page .archive-filters button[aria-pressed=true]{background:#8e1e31}.portfolio-page .collection-grid .portfolio-photo{background:#170a0e;border-color:#7e26351f}
+
+@media(max-width:1099px){
+ .header,.catalog-header{background:#16090ef8!important;color:#fff!important}
+ .header nav,.catalog-header nav{background:#190a0f!important;border-color:#6e2a35!important;color:#fff!important;box-shadow:0 18px 35px #0008}
+ body .header>.menu-toggle,body .catalog-header>.menu-toggle{display:flex!important;position:static!important;margin-left:auto!important;background:#f8f4ed!important;color:#321017!important;border:1px solid #b88f96!important;opacity:1!important;visibility:visible!important;transform:none!important}
+}
+@media(max-width:600px){
+ body .header>.menu-toggle,body .catalog-header>.menu-toggle{display:flex!important;position:static!important;margin-left:auto!important;background:#f8f4ed!important;color:#321017!important;border-color:#b88f96!important}
+ .darya-studio.studio-section--triptych{height:clamp(500px,148vw,650px);padding:8px}
+ .darya-studio .studio-montage{inset:8px;grid-template-columns:1fr}
+ .darya-studio .studio-cut--mobile{display:block;object-position:center 45%}
+ .darya-studio.studio-section--triptych::after{inset:8px}
+ .darya-studio .studio-montage-title{padding:26px}
+ .darya-studio.studio-section--triptych #studio-title{font-size:clamp(46px,14vw,66px)}
+ #services.services-panels::before{background-size:auto 290px;background-position:125% -8px;opacity:.13}
+ #services.services-panels::after{right:-92px;top:-72px;width:220px}
+ .faq-section{padding:52px 20px 62px;background:radial-gradient(circle at 84% 13%,#7d1d2d 0 8%,transparent 8.4%),linear-gradient(155deg,#21080f,#080707 70%)}
+ .faq-section::after{background-size:auto 360px;background-position:70% 2%;opacity:.07}
+ .faq-japanese-mark{right:18px;top:22px;transform:scale(.72);transform-origin:top right}.faq-japanese-mark span{width:62px}
+ .darya-logo{width:104px!important;min-width:104px;height:48px}.darya-logo img{width:102px!important;height:48px!important}
+ .hero-back-overlay{-webkit-mask-image:linear-gradient(90deg,transparent 0 45%,#000 64%);mask-image:linear-gradient(90deg,transparent 0 45%,#000 64%)}
+ .booking-direct-dialog{padding:48px 22px 28px}
+ .booking-contact-list a{grid-template-columns:76px 1fr auto;gap:10px;min-height:68px}.booking-contact-list strong{font-size:18px}
+}
+
+/* Final one-page art direction: static sakura hero and two coherent portfolios. */
+.darya-hero .hero-art{
+ background:#f2f0e9;
+}
+.hero-static-art{
+ display:block;
+ position:absolute;
+ inset:0;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ object-position:center;
+}
+.darya-hero .hero-copy{left:39%;width:31%}
+#hero-title a:hover,#hero-title a:focus-visible{color:#8e1e31;text-decoration:none}
+
+.works{background:linear-gradient(180deg,#12070b,#080707);}
+.piercing-showcase{background:linear-gradient(180deg,#12070b,#080707);}
+.piercing-showcase .works-heading{border-color:#79535a3d}
+.piercing-showcase .heading-rule{background:#8f777b}
+.work-strip .work-card{height:auto;aspect-ratio:4/5;background:#0a0809}
+.piercing-preview-strip .work-card{background:#0a0809}
+.work-strip .work-image img{object-fit:cover;object-position:center}
+
+/* One-layer rectangular actions with a restrained moving glint. */
+.cta,.header-cta,.service-panel-action,.catalog-panel-button,.faq-ask{
+ position:relative;
+ overflow:hidden;
+ isolation:isolate;
+ border:1px solid #b84256!important;
+ border-radius:0!important;
+ background:#8e1e31!important;
+ color:#fff!important;
+ box-shadow:none!important;
+ clip-path:none!important;
+ text-decoration:none!important;
+ transform:none!important;
+ transition:background-color .2s ease,border-color .2s ease!important;
+}
+.cta::after,.header-cta::after,.service-panel-action::after,.catalog-panel-button::after,.faq-ask::after{
+ content:"";
+ position:absolute;
+ z-index:2;
+ top:-65%;
+ left:-80%;
+ width:34%;
+ height:230%;
+ inset-block-start:-65%;
+ background:linear-gradient(90deg,transparent,#fff8,transparent);
+ transform:skewX(-22deg);
+ animation:darya-button-glint 4.2s ease-in-out infinite;
+ pointer-events:none;
+}
+.cta:hover,.header-cta:hover,.service-panel:hover .service-panel-action,.catalog-panel:hover .catalog-panel-button,.faq-ask:hover{
+ background:#a4263a!important;
+ color:#fff!important;
+ border-color:#d05c6f!important;
+ box-shadow:none!important;
+ transform:none!important;
+}
+.service-panel-action{display:flex;width:min(100%,208px);margin:0 auto;font:500 11px/1 var(--sans);letter-spacing:.22em}
+.footer-invitation .cta,.footer-invitation .cta:hover{background:#8e1e31!important;color:#fff!important;border-color:#c1485c!important}
+@keyframes darya-button-glint{0%,67%{left:-80%}100%{left:145%}}
+
+@media(max-width:900px){
+ .darya-hero .hero-copy{left:auto;width:100%}
+ .darya-hero .hero-art{background:#f2f0e9}
+ .hero-static-art{position:absolute;object-position:center}
+}
+@media(max-width:600px){
+ .darya-hero .hero-art{aspect-ratio:16/9}
+ .hero-static-art{object-position:center}
+ .work-strip .work-card{height:auto;aspect-ratio:4/5}
+}
+
+/* Final palette and actions: warm milk text, flat borderless buttons. */
+.header,.catalog-header,.works,.piercing-showcase,.studio-section,.faq-section,.footer-new,
+.photo-dialog,.booking-dialog{color:#f1e8df}
+.header nav a,.catalog-header nav a,.works-heading,.studio-montage-title,
+.faq-section,.footer-new,.footer-new a,.footer-new button{color:#f1e8df!important}
+.cta,.header-cta,.service-panel-action,.catalog-panel-button,.faq-ask{
+ border:0!important;
+ color:#f3e9df!important;
+ box-shadow:none!important;
+ outline:0!important;
+}
+.cta::after,.header-cta::after,.service-panel-action::after,.catalog-panel-button::after,.faq-ask::after{
+ content:none!important;
+ display:none!important;
+ animation:none!important;
+}
+.header-cta{box-shadow:none!important}
+.service-panel-action{background:#8e1e31!important;color:#f3e9df!important}
+
+/* Exact studio mark: preserve the original vertical lockup and its proportions. */
+.header .darya-logo{
+ flex:0 0 68px!important;
+ width:68px!important;
+ min-width:68px!important;
+ height:68px!important;
+ overflow:visible;
+}
+.header .darya-logo img{
+ width:64px!important;
+ height:68px!important;
+ object-fit:contain;
+ object-position:center;
+}
+
+/* Services rebuilt as a quiet editorial grid with no ornamental layer. */
+#services.services-panels{
+ padding:clamp(58px,6vw,92px) var(--gutter) clamp(72px,7vw,112px);
+ background:#f3efe8;
+ color:#16090d;
+ overflow:hidden;
+}
+#services.services-panels::before,#services.services-panels::after{content:none!important;display:none!important}
+.services-panels-heading{
+ display:block;
+ margin:0 0 clamp(28px,3vw,44px);
+ padding:0 0 24px;
+ border-bottom:1px solid #8f777b;
+}
+.services-panels-heading h2{font-size:clamp(42px,4.4vw,70px);letter-spacing:.12em}
+.services-panels-grid{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:clamp(12px,1.35vw,22px);
+}
+.service-panel{
+ display:flex;
+ flex-direction:column;
+ min-width:0;
+ text-align:left;
+ border:1px solid #b8a8aa;
+ background:#f8f4ed;
+}
+.service-panel::before{content:none!important;display:none!important}
+.service-panel-image{
+ width:100%;
+ aspect-ratio:4/5;
+ border-radius:0;
+ object-fit:cover;
+ object-position:center;
+ box-shadow:none;
+ filter:none!important;
+}
+.service-panel-content{
+ display:flex;
+ flex:1;
+ flex-direction:column;
+ align-items:flex-start;
+ padding:clamp(20px,2vw,30px);
+ border-top:1px solid #b8a8aa;
+}
+.service-panel h3{font-size:clamp(29px,2.5vw,42px);white-space:normal;margin-bottom:12px}
+.service-panel-content>p{min-height:3.1em;margin:0 0 22px;color:#6d5d60}
+.service-panel-action{width:100%;margin:auto 0 0}
+@media(hover:hover){.service-panel:hover .service-panel-image{transform:none;filter:none!important}}
+
+/* FAQ keeps only the small Japanese sign; the large bird artwork is removed. */
+.faq-section{background:linear-gradient(125deg,#21080f,#090708 70%)}
+.faq-section::after{content:none!important;display:none!important;background:none!important}
+
+@media(max-width:900px){
+ .services-panels-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .service-panel h3{font-size:36px}
+}
+@media(max-width:600px){
+ .header .darya-logo{flex-basis:62px!important;width:62px!important;min-width:62px!important;height:64px!important}
+ .header .darya-logo img{width:59px!important;height:64px!important}
+ #services.services-panels{padding:48px 18px 64px}
+ .services-panels-heading{margin-bottom:20px;padding-bottom:18px}
+ .services-panels-heading h2{font-size:38px}
+ .services-panels-grid{gap:14px}
+ .service-panel-content{padding:16px 12px 14px}
+ .service-panel h3{font-size:clamp(24px,7.2vw,31px)}
+ .service-panel-content>p{font-size:9px;margin-bottom:14px}
+ .faq-section{padding-top:86px}
+}
